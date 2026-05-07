@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "project_name"
+version: 0.1.0
+date-released: 2026-02-28
+license: MIT
+
+authors:
+  - family-names: "Ponce-Pacheco"
+    given-names: "Mario Alberto"
+    email: "map10194@nyu.edu"
+    affiliation: "New York University (NYU) Tandon School of Engineering"
+
+repository-code: "https://github.com/youruser/project_name"
+url: "https://github.com/youruser/project_name"
+
+keywords:
+  - python
+  - scientific computing
+  - hydrology
+  - geospatial analysis
+
+preferred-citation:
+  type: software
+  title: "project_name"
+  authors:
+    - family-names: "Ponce-Pacheco"
+      given-names: "Mario Alberto"
+    - family-names: "CoauthorLastName"
+      given-names: "CoauthorFirstName"
+  version: 0.1.0
+  date-released: 2026-02-28
+  repository-code: "https://github.com/youruser/project_name"
+  license: MIT
