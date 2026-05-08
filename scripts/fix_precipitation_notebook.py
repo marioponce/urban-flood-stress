@@ -653,6 +653,31 @@ def patch_precipitation_notebook() -> None:
         if "def get_noaa_token" not in text or "def select_precip_source" not in text:
             continue
 
+        text = re.sub(
+            r"FULL_CACHE = \{\}\n\n\ndef get_noaa_token",
+            """FULL_CACHE = {}
+
+TARGET_STATIONS = [
+    'US1NJPS0012',
+    'USC00283704',
+    'USC00289187',
+    'US1NJMN0010',
+    'USC00066655',
+    'US1NJMS0049',
+    'US1NJPS0019',
+    'USC00300961',
+    'USC00287865',
+    'USC00285503',
+    'USC00302129',
+    'USC00287079',
+    'USC00306138',
+]
+
+def get_noaa_token""",
+            text,
+            count=1,
+        )
+
         text = text.replace(
             """def get_noaa_token() -> str:
     for name in NOAA_TOKEN_ENV_NAMES:

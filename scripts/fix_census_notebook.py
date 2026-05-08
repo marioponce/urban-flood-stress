@@ -1,15 +1,15 @@
 from __future__ import annotations
 
 import json
+from inspect import cleandoc
 from pathlib import Path
-from textwrap import dedent
 
 
 NOTEBOOK_PATH = Path("notebooks/census.ipynb")
 
 
 def md_cell(text: str) -> dict:
-    text = dedent(text).strip("\n")
+    text = cleandoc(text).strip("\n")
     return {
         "cell_type": "markdown",
         "metadata": {},
@@ -18,7 +18,7 @@ def md_cell(text: str) -> dict:
 
 
 def code_cell(text: str) -> dict:
-    text = dedent(text).strip("\n")
+    text = cleandoc(text).strip("\n")
     return {
         "cell_type": "code",
         "execution_count": None,
@@ -429,24 +429,29 @@ def main() -> None:
                 return merged
 
 
-            def add_derived_metrics(frame: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
-                enriched = frame.copy()
-                enriched["poverty_rate"] = safe_ratio(
-                    enriched.get("B17001_002E"),
-                    enriched.get("B17001_001E"),
-                    enriched.index,
-                )
-                enriched["renter_share"] = safe_ratio(
-                    enriched.get("B25003_003E"),
-                    enriched.get("B25003_001E"),
-                    enriched.index,
-                )
-                enriched["no_vehicle_share"] = safe_ratio(
-                    enriched.get("B25044_003E"),
-                    enriched.get("B25044_001E"),
-                    enriched.index,
-                )
-                return enriched
+def add_derived_metrics(frame: gpd.GeoDataFrame) -> gpd.GeoDataFrame:
+    enriched = frame.copy()
+    income_source = first_existing_column(enriched.columns, "median_household_income", "B19013_001E", "DP03_0062E")
+    if income_source is not None:
+        enriched["median_household_income"] = pd.to_numeric(enriched[income_source], errors="coerce")
+    else:
+        enriched["median_household_income"] = np.nan
+    enriched["poverty_rate"] = safe_ratio(
+        enriched.get("B17001_002E"),
+        enriched.get("B17001_001E"),
+        enriched.index,
+    )
+    enriched["renter_share"] = safe_ratio(
+        enriched.get("B25003_003E"),
+        enriched.get("B25003_001E"),
+        enriched.index,
+    )
+    enriched["no_vehicle_share"] = safe_ratio(
+        enriched.get("B25044_003E"),
+        enriched.get("B25044_001E"),
+        enriched.index,
+    )
+    return enriched
 
 
             def load_nyc_boundary() -> gpd.GeoDataFrame:
@@ -697,12 +702,28 @@ def main() -> None:
                 latest_result = period_results[-1]
                 latest_layer = latest_result["layer"]
                 latest_period = latest_result["acs_period"]
+                income_column = first_existing_column(
+                    latest_layer.columns,
+                    "median_household_income",
+                    "B19013_001E",
+                    "DP03_0062E",
+                )
+                poverty_column = first_existing_column(
+                    latest_layer.columns,
+                    "poverty_rate",
+                    "B17001_002E",
+                )
+                if income_column is None or poverty_column is None:
+                    raise KeyError(
+                        "Missing derived census columns for plotting: "
+                        f"income={income_column}, poverty={poverty_column}"
+                    )
 
                 fig, axes = plt.subplots(1, 2, figsize=(18, 9), constrained_layout=True)
 
                 latest_layer.plot(
                     ax=axes[0],
-                    column="median_household_income",
+                    column=income_column,
                     cmap="viridis",
                     linewidth=0.05,
                     edgecolor="white",
@@ -716,7 +737,7 @@ def main() -> None:
 
                 latest_layer.plot(
                     ax=axes[1],
-                    column="poverty_rate",
+                    column=poverty_column,
                     cmap="magma_r",
                     linewidth=0.05,
                     edgecolor="white",
@@ -730,12 +751,12 @@ def main() -> None:
                 plt.show()
 
                 fig, axes = plt.subplots(1, 2, figsize=(14, 4), constrained_layout=True)
-                latest_layer["median_household_income"].dropna().plot.hist(ax=axes[0], bins=30, color="#2c7fb8", alpha=0.85)
+                latest_layer[income_column].dropna().plot.hist(ax=axes[0], bins=30, color="#2c7fb8", alpha=0.85)
                 axes[0].set_title("Median household income distribution")
                 axes[0].set_xlabel("USD")
                 axes[0].set_ylabel("Count")
 
-                latest_layer["poverty_rate"].dropna().plot.hist(ax=axes[1], bins=30, color="#d95f0e", alpha=0.85)
+                latest_layer[poverty_column].dropna().plot.hist(ax=axes[1], bins=30, color="#d95f0e", alpha=0.85)
                 axes[1].set_title("Poverty rate distribution")
                 axes[1].set_xlabel("Share")
                 axes[1].set_ylabel("Count")
@@ -748,8 +769,8 @@ def main() -> None:
                             "GEOID",
                             "borough",
                             "acs_period",
-                            "median_household_income",
-                            "poverty_rate",
+                            income_column,
+                            poverty_column,
                             "renter_share",
                             "no_vehicle_share",
                             "geometry",
@@ -772,6 +793,19 @@ def main() -> None:
             """
         ),
     ]
+    for cell in nb["cells"]:
+        if cell.get("cell_type") != "code":
+            continue
+        source = cell.get("source", [])
+        text = "".join(source) if isinstance(source, list) else str(source)
+        lines = text.splitlines()
+        if not lines:
+            continue
+        first_non_empty = next((line for line in lines if line.strip()), "")
+        has_root_level = any(line and not line.startswith(" ") for line in lines[1:])
+        if first_non_empty.startswith("            ") and has_root_level:
+            normalized_lines = [line[12:] if line.startswith("            ") else line for line in lines]
+            cell["source"] = [f"{line}\n" for line in normalized_lines]
     NOTEBOOK_PATH.write_text(json.dumps(nb, ensure_ascii=False, indent=1))
 
 
