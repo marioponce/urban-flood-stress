@@ -8,7 +8,7 @@ Métodos limpios y directos para cuatro flujos:
 - `notebooks/street-network.ipynb`: carga el LION local y construye métricas de grafo en Jupyter.
 - `notebooks/network-connectivity.ipynb`: interpreta componentes, puentes y articulaciones de la red vial.
 - `notebooks/download-311.ipynb`: lee el raw local de 311 y empieza el procesamiento en Jupyter.
-- `notebooks/census.ipynb`: descarga ACS/TIGER y construye contexto demográfico y socioeconómico.
+- `notebooks/census.ipynb`: descarga ACS 5-Year multi-period, cruza TIGER/Line y construye contexto demográfico y socioeconómico.
 - `notebooks/noaa-tides.ipynb`: descarga mareas y Thiessen para estaciones NOAA.
 - `notebooks/precipitation.ipynb`: descarga el registro completo de precipitación NOAA CDO para las estaciones seleccionadas y construye Thiessen.
 
@@ -32,7 +32,7 @@ En Jupyter:
 - abre `notebooks/street-network.ipynb` para descargar calles y generar métricas.
 - abre `notebooks/network-connectivity.ipynb` para resumir la conectividad de la red.
 - abre `notebooks/download-311.ipynb` para bajar 311 mes a mes.
-- abre `notebooks/census.ipynb` para generar el contexto ACS de NYC.
+- abre `notebooks/census.ipynb` para generar el contexto ACS multi-period de NYC.
 
 ## Paquete
 
