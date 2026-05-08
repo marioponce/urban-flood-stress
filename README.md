@@ -10,7 +10,7 @@ Métodos limpios y directos para cuatro flujos:
 - `notebooks/download-311.ipynb`: lee el raw local de 311 y empieza el procesamiento en Jupyter.
 - `notebooks/census.ipynb`: descarga ACS/TIGER y construye contexto demográfico y socioeconómico.
 - `notebooks/noaa-tides.ipynb`: descarga mareas y Thiessen para estaciones NOAA.
-- `notebooks/precipitation.ipynb`: descarga precipitación NOAA CDO y Thiessen.
+- `notebooks/precipitation.ipynb`: descarga el registro completo de precipitación NOAA CDO para las estaciones seleccionadas y construye Thiessen.
 
 ## Estructura de datos
 
