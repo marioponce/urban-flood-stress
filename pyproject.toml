@@ -1,7 +1,7 @@
 [project]
-name = "project_name"
+name = "urban-flood-stress"
 version = "0.1.0"
-description = "Description."
+description = "Urban flood stress workflows for NYC street data and 311 requests."
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [
@@ -13,6 +13,12 @@ dependencies = [
   "numpy",
   "pandas",
   "matplotlib",
+  "geopandas",
+  "shapely",
+  "pyproj",
+  "python-igraph",
+  "sodapy",
+  "pyarrow",
 ]
 
 [project.optional-dependencies]

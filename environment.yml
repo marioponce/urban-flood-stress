@@ -1,11 +1,35 @@
-name: project_env
+name: urban-flood-stress
 channels:
-  - defaults
   - conda-forge
+  - defaults
 dependencies:
   - python=3.11
-  - numpy
   - pandas
+  - numpy
+  - geopandas
+  - shapely
+  - pyproj
+  - proj
+  - gdal
+  - rasterio
+  - rioxarray
+  - contextily
+  - scikit-learn
   - matplotlib
-  - jupyterlab
+  - networkx
+  - pyarrow
+  - python-igraph
+  - pgmpy
+  - opt_einsum
+  - pyro-ppl
   - ipykernel
+  - nbconvert
+  - sodapy
+  - pytest
+  - black
+  - ruff
+  - sphinx
+  - myst-parser
+  - pip
+  - pip:
+      - -e .
