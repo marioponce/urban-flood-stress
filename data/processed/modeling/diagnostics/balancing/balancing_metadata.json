@@ -1,0 +1,11 @@
+{
+  "natural_rows": 34870,
+  "balanced_rows": 69738,
+  "positive_rows": 34870,
+  "negative_rows": 34868,
+  "unreported_candidates": 152963,
+  "temporal_exclusion_hours": 6,
+  "negative_spatial_exclusion_m": 100,
+  "unreported_distance_m": 20,
+  "resolution_policy_for_negatives": "NaN"
+}
