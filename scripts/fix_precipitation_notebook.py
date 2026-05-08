@@ -642,159 +642,100 @@ def main() -> None:
 
 
 def patch_precipitation_notebook() -> None:
-    """Patch the current precipitation notebook without relying on a fixed cell count."""
+    """Patch the current precipitation notebook in-place."""
     nb = json.loads(NOTEBOOK_PATH.read_text())
 
-    for cell in nb["cells"]:
-        if cell.get("cell_type") != "code":
-            continue
-        source = cell.get("source", [])
-        text = "".join(source) if isinstance(source, list) else str(source)
-        if "def get_noaa_token" not in text or "def select_precip_source" not in text:
-            continue
+    def patch_text(text: str) -> str:
+        updated = text
 
-        text = re.sub(
-            r"FULL_CACHE = \{\}\n\n\ndef get_noaa_token",
-            """FULL_CACHE = {}
-
-TARGET_STATIONS = [
-    'US1NJPS0012',
-    'USC00283704',
-    'USC00289187',
-    'US1NJMN0010',
-    'USC00066655',
-    'US1NJMS0049',
-    'US1NJPS0019',
-    'USC00300961',
-    'USC00287865',
-    'USC00285503',
-    'USC00302129',
-    'USC00287079',
-    'USC00306138',
-]
-
-def get_noaa_token""",
-            text,
-            count=1,
+        updated = updated.replace(
+            "NOAA_TOKEN_ENV_NAMES = ('NOAA_CDO_TOKEN', 'NOAA_API_TOKEN')",
+            "NOAA_TOKEN_ENV_NAMES = ('NOAA_CDO_TOKEN', 'NOAA_API_TOKEN', 'NOAA_TOKEN')",
+            1,
         )
 
-        text = text.replace(
-            """def get_noaa_token() -> str:
-    for name in NOAA_TOKEN_ENV_NAMES:
-        token = os.getenv(name)
-        if token:
-            return token
-    raise RuntimeError('Falta el token de NOAA. Define NOAA_CDO_TOKEN o NOAA_API_TOKEN.')
-""",
-            """def get_noaa_token() -> str | None:
-    for name in NOAA_TOKEN_ENV_NAMES:
-        token = os.getenv(name)
-        if token:
-            return token
-    logger.warning('Falta el token de NOAA. Se usara cache local si existe; de lo contrario, la descarga quedara vacia.')
-    return None
-""",
+        updated = updated.replace(
+            "HOURLY_DRY_GAP = pd.Timedelta(hours=6)\nLOCAL_CRS = 'EPSG:2263'",
+            "HOURLY_DRY_GAP = pd.Timedelta(hours=6)\nFORCE_REFRESH = True\nLOCAL_CRS = 'EPSG:2263'",
+            1,
         )
 
-        text = text.replace(
-            """    if cache_path.exists() and not force_refresh:
-        frame = pd.read_csv(cache_path, low_memory=False)
-        frame.attrs['record_count'] = len(frame)
-        return frame
-
-    rows = []
-""",
-            """    if cache_path.exists() and not force_refresh:
-        frame = pd.read_csv(cache_path, low_memory=False)
-        frame.attrs['record_count'] = len(frame)
-        return frame
-
-    if not token:
-        logger.warning(
-            'NOAA token missing; skipping fetch for dataset=%s datatype=%s station=%s',
-            dataset_id,
-            datatype_id,
-            station_id,
-        )
-        empty = pd.DataFrame()
-        empty.attrs['record_count'] = 0
-        return empty
-
-    rows = []
-""",
+        updated = updated.replace(
+            "PROBE_LIMIT = 25\nAPI_MAX_RETRIES = 5",
+            "PROBE_LIMIT = 25\nDOWNLOAD_WINDOW_DAYS = 364\nPROBE_WINDOW_DAYS = 90\nAPI_MAX_RETRIES = 5",
+            1,
         )
 
-        text = re.sub(
-            r"def discover_precip_datatypes\(dataset_id: str, token: str\) -> list\[str\]:.*?\n\n(?=def probe_station_source)",
-            """def discover_precip_datatypes(dataset_id: str, token: str | None = None) -> list[str]:
-    # Return explicit precipitation datatype candidates without any extra API probing.
-    if dataset_id == 'GHCND':
-        return ['PRCP']
-    if dataset_id == 'LCD':
-        return ['HPCP', 'PRCP']
-    return []
-
-""",
-            text,
-            flags=re.S,
+        updated = updated.replace(
+            "ROOT = find_project_root()\nINVENTORY_PATH = ROOT / 'data' / 'temporal' / 'noaa' / '4308211.csv'\nNYC_BOUNDARY_PATH = ROOT / 'data' / 'spatial' / 'vector' / 'nyc_borough_boundary' / 'nybb.geojson'\n",
+            """ROOT = find_project_root()\n\n\ndef load_env_file(path: Path) -> None:\n    # Load KEY=VALUE pairs from a local .env file.\n    if not path.exists():\n        return\n    for raw_line in path.read_text().splitlines():\n        line = raw_line.strip()\n        if not line or line.startswith('#'):\n            continue\n        if line.startswith('export '):\n            line = line[len('export '):].strip()\n        if '=' not in line:\n            continue\n        key, value = line.split('=', 1)\n        key = key.strip()\n        value = value.strip().strip('\"').strip(\"'\")\n        if key and key not in os.environ:\n            os.environ[key] = value\n\n\nload_env_file(ROOT / '.env')\n\nINVENTORY_PATH = ROOT / 'data' / 'temporal' / 'noaa' / '4308211.csv'\nNYC_BOUNDARY_PATH = ROOT / 'data' / 'spatial' / 'vector' / 'nyc_borough_boundary' / 'nybb.geojson'\n""",
+            1,
         )
 
-        text = text.replace(
-            """    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))
-    if cache_key in PROBE_CACHE:
-        return PROBE_CACHE[cache_key]
-""",
-            """    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))
-    if cache_key in PROBE_CACHE:
-        return PROBE_CACHE[cache_key]
-    if not token:
-        PROBE_CACHE[cache_key] = None
-        return None
-""",
+        updated = updated.replace(
+            """def get_noaa_token() -> str | None:\n    for name in NOAA_TOKEN_ENV_NAMES:\n        token = os.getenv(name)\n        if token:\n            return token\n    logger.warning('NOAA token missing. The notebook will use local cache if available; uncached API requests will return empty frames.')\n    return None\n""",
+            """def get_noaa_token() -> str:\n    for name in NOAA_TOKEN_ENV_NAMES:\n        token = os.getenv(name)\n        if token:\n            return token\n    raise RuntimeError('Falta el token de NOAA. Define NOAA_CDO_TOKEN, NOAA_API_TOKEN o NOAA_TOKEN en .env o en el entorno.')\n""",
+            1,
         )
 
-        text = re.sub(
-            r"def select_precip_source\(\n    token: str,\n    station_row: pd\.Series,\n    kind: str,\n\) -> dict \| None:\n.*?    return None\n\n(?=def audit_station_availability)",
-            """def select_precip_source(
-    token: str | None,
-    station_row: pd.Series,
-    kind: str,
-) -> dict | None:
-    station_id = str(station_row['station_id'])
-    station_name = str(station_row['station_name'])
-    aliases = station_aliases(station_id)
-    if kind == 'daily':
-        candidates = [('GHCND', 'PRCP'), ('LCD', 'PRCP')]
-        required_resolution = 'daily'
-    elif kind == 'hourly':
-        candidates = [('LCD', 'HPCP')]
-        required_resolution = 'hourly'
-    else:
-        raise ValueError(f'Unknown kind: {kind}')
-    for dataset_id, datatype_id in candidates:
-        probe = probe_station_source(
-            token=token,
-            dataset_id=dataset_id,
-            datatype_id=datatype_id,
-            anchor_station_id=station_id,
-            station_name=station_name,
-            aliases=aliases,
-            required_resolution=required_resolution,
-        )
-        if probe is not None:
-            probe['source_kind'] = kind
-            return probe
-    return None
-
-""",
-            text,
-            flags=re.S,
+        updated = updated.replace(
+            """def probe_station_source(token: str | None, dataset_id: str, datatype_id: str, anchor_station_id: str, station_name: str, required_resolution: str, notes: str = '') -> dict | None:\n    aliases = station_aliases(anchor_station_id, dataset_id=dataset_id)\n    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))\n    if cache_key in PROBE_CACHE:\n        return PROBE_CACHE[cache_key]\n    if not token:\n        PROBE_CACHE[cache_key] = None\n        return None\n\n    errors = []\n    for alias in aliases:\n        try:\n            raw = fetch_cdo_frame(token=token, dataset_id=dataset_id, datatype_id=datatype_id, station_id=alias, start_date=START_DATE, end_date=END_DATE, limit=PROBE_LIMIT, kind='probe')\n        except Exception as exc:\n            errors.append(f'{alias}: {exc}')\n            continue\n        if raw.empty:\n            continue\n        try:\n            prepared = prepare_cdo_frame(raw, dataset_id=dataset_id, datatype_id=datatype_id)\n        except Exception as exc:\n            errors.append(f'{alias}: parse_error={exc}')\n            continue\n        if prepared.empty:\n            continue\n        resolution = infer_temporal_resolution(prepared['timestamp'], dataset_id=dataset_id, datatype_id=datatype_id)\n        if required_resolution == 'daily' and resolution != 'daily':\n            continue\n        if required_resolution == 'hourly' and resolution not in {'hourly', 'subhourly'}:\n            continue\n        result = {\n            'station_id': anchor_station_id,\n            'station_name': station_name,\n            'source_dataset': dataset_id,\n            'data_type': datatype_id,\n            'source_station_id': str(prepared['source_station_id'].dropna().iloc[0]) if prepared['source_station_id'].notna().any() else alias,\n            'source_alias_used': alias,\n            'temporal_resolution': resolution,\n            'record_count_probe': int(raw.attrs.get('record_count', len(prepared))),\n            'sample_start': prepared['timestamp'].min(),\n            'sample_end': prepared['timestamp'].max(),\n            'candidate_notes': notes,\n        }\n        PROBE_CACHE[cache_key] = result\n        return result\n    if errors:\n        logger.info('Probe failed for station=%s dataset=%s datatype=%s examples=%s', anchor_station_id, dataset_id, datatype_id, ' | '.join(errors[:3]))\n    PROBE_CACHE[cache_key] = None\n    return None\n""",
+            """def probe_station_source(token: str | None, dataset_id: str, datatype_id: str, anchor_station_id: str, station_name: str, required_resolution: str, notes: str = '', force_refresh: bool = False) -> dict | None:\n    aliases = station_aliases(anchor_station_id, dataset_id=dataset_id)\n    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))\n    if not force_refresh and cache_key in PROBE_CACHE:\n        return PROBE_CACHE[cache_key]\n    if not token:\n        PROBE_CACHE[cache_key] = None\n        return None\n\n    errors = []\n    for alias in aliases:\n        try:\n            raw = fetch_cdo_frame(token=token, dataset_id=dataset_id, datatype_id=datatype_id, station_id=alias, start_date=START_DATE, end_date=END_DATE, limit=PROBE_LIMIT, kind='probe', force_refresh=force_refresh)\n        except Exception as exc:\n            errors.append(f'{alias}: {exc}')\n            continue\n        if raw.empty:\n            continue\n        try:\n            prepared = prepare_cdo_frame(raw, dataset_id=dataset_id, datatype_id=datatype_id)\n        except Exception as exc:\n            errors.append(f'{alias}: parse_error={exc}')\n            continue\n        if prepared.empty:\n            continue\n        resolution = infer_temporal_resolution(prepared['timestamp'], dataset_id=dataset_id, datatype_id=datatype_id)\n        if required_resolution == 'daily' and resolution != 'daily':\n            continue\n        if required_resolution == 'hourly' and resolution not in {'hourly', 'subhourly'}:\n            continue\n        result = {\n            'station_id': anchor_station_id,\n            'station_name': station_name,\n            'source_dataset': dataset_id,\n            'data_type': datatype_id,\n            'source_station_id': str(prepared['source_station_id'].dropna().iloc[0]) if prepared['source_station_id'].notna().any() else alias,\n            'source_alias_used': alias,\n            'temporal_resolution': resolution,\n            'record_count_probe': int(raw.attrs.get('record_count', len(prepared))),\n            'sample_start': prepared['timestamp'].min(),\n            'sample_end': prepared['timestamp'].max(),\n            'candidate_notes': notes,\n        }\n        PROBE_CACHE[cache_key] = result\n        return result\n    if errors:\n        logger.info('Probe failed for station=%s dataset=%s datatype=%s examples=%s', anchor_station_id, dataset_id, datatype_id, ' | '.join(errors[:3]))\n    PROBE_CACHE[cache_key] = None\n    return None\n""",
+            1,
         )
 
-        cell["source"] = [f"{line}\n" for line in text.rstrip("\n").splitlines()]
-        cell["outputs"] = []
-        cell["execution_count"] = None
-        break
+        updated = updated.replace(
+            """def select_precip_source(token: str | None, station_row: pd.Series, kind: str) -> tuple[dict | None, list[str]]:\n    station_id = str(station_row['station_id'])\n    station_name = str(station_row['station_name'])\n    checked = []\n    if kind == 'daily':\n        candidates = DAILY_CANDIDATES\n        required_resolution = 'daily'\n    elif kind == 'hourly':\n        candidates = hourly_candidate_table(token)\n        required_resolution = 'hourly'\n    else:\n        raise ValueError(f'Unknown kind: {kind}')\n\n    for candidate in candidates:\n        dataset_id = candidate['dataset_id']\n        datatype_id = candidate['datatype_id']\n        checked.append(f'{dataset_id}:{datatype_id}')\n        probe = probe_station_source(\n            token=token,\n            dataset_id=dataset_id,\n            datatype_id=datatype_id,\n            anchor_station_id=station_id,\n            station_name=station_name,\n            required_resolution=required_resolution,\n            notes=candidate.get('notes', ''),\n        )\n        if probe is not None:\n            probe['source_kind'] = kind\n            probe['checked_candidates'] = checked.copy()\n            return probe, checked\n    return None, checked\n""",
+            """def select_precip_source(token: str | None, station_row: pd.Series, kind: str, force_refresh: bool = False) -> tuple[dict | None, list[str]]:\n    station_id = str(station_row['station_id'])\n    station_name = str(station_row['station_name'])\n    checked = []\n    if kind == 'daily':\n        candidates = DAILY_CANDIDATES\n        required_resolution = 'daily'\n    elif kind == 'hourly':\n        candidates = hourly_candidate_table(token)\n        required_resolution = 'hourly'\n    else:\n        raise ValueError(f'Unknown kind: {kind}')\n\n    for candidate in candidates:\n        dataset_id = candidate['dataset_id']\n        datatype_id = candidate['datatype_id']\n        checked.append(f'{dataset_id}:{datatype_id}')\n        probe = probe_station_source(\n            token=token,\n            dataset_id=dataset_id,\n            datatype_id=datatype_id,\n            anchor_station_id=station_id,\n            station_name=station_name,\n            required_resolution=required_resolution,\n            notes=candidate.get('notes', ''),\n            force_refresh=force_refresh,\n        )\n        if probe is not None:\n            probe['source_kind'] = kind\n            probe['checked_candidates'] = checked.copy()\n            return probe, checked\n    return None, checked\n""",
+            1,
+        )
+
+        updated = updated.replace(
+            """def audit_station_availability(station_row: pd.Series, token: str | None) -> dict:\n    daily, daily_checked = select_precip_source(token, station_row, 'daily')\n    hourly, hourly_checked = select_precip_source(token, station_row, 'hourly')\n""",
+            """def audit_station_availability(station_row: pd.Series, token: str | None, force_refresh: bool = False) -> dict:\n    daily, daily_checked = select_precip_source(token, station_row, 'daily', force_refresh=force_refresh)\n    hourly, hourly_checked = select_precip_source(token, station_row, 'hourly', force_refresh=force_refresh)\n""",
+            1,
+        )
+
+        updated = updated.replace(
+            """token = get_noaa_token()\nnyc_boroughs, nyc_union = load_nyc_boundary()\nstation_inventory = load_station_inventory(TARGET_STATIONS)\n""",
+            """token = get_noaa_token()\nnyc_boroughs, nyc_union = load_nyc_boundary()\nPRECIP_DATATYPE_CACHE.clear()\nPROBE_CACHE.clear()\nstation_inventory = load_station_inventory(TARGET_STATIONS)\n""",
+            1,
+        )
+
+        updated = updated.replace(
+            "availability_probe = pd.DataFrame([audit_station_availability(row, token) for row in station_inventory.to_dict('records')])",
+            "availability_probe = pd.DataFrame([audit_station_availability(row, token, force_refresh=FORCE_REFRESH) for row in station_inventory.to_dict('records')])",
+            1,
+        )
+
+        updated = updated.replace(
+            """def fetch_selected_series(selection: pd.DataFrame, kind: str, token: str | None) -> pd.DataFrame:\n    frames = []\n    for row in selection.to_dict('records'):\n        source_dataset = row[f'{kind}_source_dataset']\n        data_type = row[f'{kind}_data_type']\n        source_station_id = row[f'{kind}_source_station_id']\n        if pd.isna(source_dataset) or pd.isna(data_type) or pd.isna(source_station_id):\n            continue\n        try:\n            raw = fetch_cdo_frame(token=token, dataset_id=str(source_dataset), datatype_id=str(data_type), station_id=str(source_station_id), start_date=START_DATE, end_date=END_DATE, limit=API_LIMIT, kind=kind)\n        except Exception as exc:\n            logger.warning('%s: failed to fetch station=%s dataset=%s datatype=%s: %s', kind, row['station_id'], source_dataset, data_type, exc)\n            continue\n        if raw.empty:\n            logger.warning('%s: no data fetched for station=%s dataset=%s datatype=%s', kind, row['station_id'], source_dataset, data_type)\n            continue\n        try:\n            frame = finalize_record_frame(raw, anchor_station_id=row['station_id'], station_name=row['station_name'], source_dataset=str(source_dataset), data_type=str(data_type), source_station_id=str(source_station_id), analysis_kind=kind)\n        except Exception as exc:\n            logger.warning('%s: fetched data failed validation for station=%s dataset=%s datatype=%s: %s', kind, row['station_id'], source_dataset, data_type, exc)\n            continue\n        frames.append(frame)\n    if not frames:\n        return pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])\n    return validate_series(pd.concat(frames, ignore_index=True), f'{kind}_records')\n""",
+            """def fetch_selected_series(selection: pd.DataFrame, kind: str, token: str | None, force_refresh: bool = False) -> pd.DataFrame:\n    frames = []\n    for row in selection.to_dict('records'):\n        source_dataset = row[f'{kind}_source_dataset']\n        data_type = row[f'{kind}_data_type']\n        source_station_id = row[f'{kind}_source_station_id']\n        if pd.isna(source_dataset) or pd.isna(data_type) or pd.isna(source_station_id):\n            continue\n        try:\n            raw = fetch_cdo_frame(token=token, dataset_id=str(source_dataset), datatype_id=str(data_type), station_id=str(source_station_id), start_date=START_DATE, end_date=END_DATE, limit=API_LIMIT, kind=kind, force_refresh=force_refresh)\n        except Exception as exc:\n            logger.warning('%s: failed to fetch station=%s dataset=%s datatype=%s: %s', kind, row['station_id'], source_dataset, data_type, exc)\n            continue\n        if raw.empty:\n            logger.warning('%s: no data fetched for station=%s dataset=%s datatype=%s', kind, row['station_id'], source_dataset, data_type)\n            continue\n        try:\n            frame = finalize_record_frame(raw, anchor_station_id=row['station_id'], station_name=row['station_name'], source_dataset=str(source_dataset), data_type=str(data_type), source_station_id=str(source_station_id), analysis_kind=kind)\n        except Exception as exc:\n            logger.warning('%s: fetched data failed validation for station=%s dataset=%s datatype=%s: %s', kind, row['station_id'], source_dataset, data_type, exc)\n            continue\n        frames.append(frame)\n    if not frames:\n        return pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])\n    return validate_series(pd.concat(frames, ignore_index=True), f'{kind}_records')\n""",
+            1,
+        )
+
+        updated = updated.replace(
+            "daily_records = fetch_selected_series(daily_selection, 'daily', token) if not daily_selection.empty else pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])",
+            "daily_records = fetch_selected_series(daily_selection, 'daily', token, force_refresh=FORCE_REFRESH) if not daily_selection.empty else pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])",
+            1,
+        )
+
+        updated = updated.replace(
+            "hourly_records = fetch_selected_series(hourly_selection, 'hourly', token) if not hourly_selection.empty else pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])",
+            "hourly_records = fetch_selected_series(hourly_selection, 'hourly', token, force_refresh=FORCE_REFRESH) if not hourly_selection.empty else pd.DataFrame(columns=['station_id', 'station_name', 'source_station_id', 'source_dataset', 'data_type', 'analysis_kind', 'temporal_resolution', 'timestamp', 'precip_mm', 'year', 'month', 'day'])",
+            1,
+        )
+
+        updated = updated.replace(
+            """# Edita esta lista antes de correr la descarga si quieres un subconjunto.\n        wanted_station_ids = []\n""",
+            """# Edita esta lista antes de correr la descarga si quieres un subconjunto.\n        # Si cambias el subconjunto, vuelve a ejecutar desde esta celda para forzar refresh.\n        wanted_station_ids = []\n""",
+            1,
+        )
+
+        if updated != text:
+            cell["source"] = [f"{line}\n" for line in updated.rstrip("\n").splitlines()]
+            cell["outputs"] = []
+            cell["execution_count"] = None
 
     NOTEBOOK_PATH.write_text(json.dumps(nb, ensure_ascii=False, indent=1))
 

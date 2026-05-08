@@ -1,0 +1,8 @@
+{
+  "rows": 34870,
+  "unique_segments": 17053,
+  "event_start_min": "2010-01-02 03:26:00",
+  "event_start_max": "2026-05-05 10:55:00",
+  "parquet_path": "/home/map10194/Documents/urban-flood-stress/data/processed/modeling/flood_events_master_table.parquet",
+  "geoparquet_path": "/home/map10194/Documents/urban-flood-stress/data/processed/modeling/flood_events_master_table.geoparquet"
+}

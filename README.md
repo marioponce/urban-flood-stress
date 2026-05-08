@@ -10,7 +10,8 @@ Métodos limpios y directos para cuatro flujos:
 - `notebooks/download-311.ipynb`: lee el raw local de 311 y empieza el procesamiento en Jupyter.
 - `notebooks/census.ipynb`: descarga ACS 5-Year multi-period, cruza TIGER/Line y construye contexto demográfico y socioeconómico.
 - `notebooks/noaa-tides.ipynb`: descarga mareas y Thiessen para estaciones NOAA.
-- `notebooks/precipitation.ipynb`: descarga el registro completo de precipitación NOAA CDO para las estaciones seleccionadas y construye Thiessen.
+- `notebooks/precipitation.ipynb`: carga solo cachés locales de precipitación NOAA CDO para las estaciones seleccionadas y construye Thiessen.
+- `scripts/download_precipitation_station.py`: descarga por estación usando `--station-index` o `--station-id` y escribe las cachés locales que consume el notebook.
 
 ## Estructura de datos
 
