@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from textwrap import dedent
 
@@ -640,5 +641,138 @@ def main() -> None:
     NOTEBOOK_PATH.write_text(json.dumps(nb, ensure_ascii=False, indent=1))
 
 
+def patch_precipitation_notebook() -> None:
+    """Patch the current precipitation notebook without relying on a fixed cell count."""
+    nb = json.loads(NOTEBOOK_PATH.read_text())
+
+    for cell in nb["cells"]:
+        if cell.get("cell_type") != "code":
+            continue
+        source = cell.get("source", [])
+        text = "".join(source) if isinstance(source, list) else str(source)
+        if "def get_noaa_token" not in text or "def select_precip_source" not in text:
+            continue
+
+        text = text.replace(
+            """def get_noaa_token() -> str:
+    for name in NOAA_TOKEN_ENV_NAMES:
+        token = os.getenv(name)
+        if token:
+            return token
+    raise RuntimeError('Falta el token de NOAA. Define NOAA_CDO_TOKEN o NOAA_API_TOKEN.')
+""",
+            """def get_noaa_token() -> str | None:
+    for name in NOAA_TOKEN_ENV_NAMES:
+        token = os.getenv(name)
+        if token:
+            return token
+    logger.warning('Falta el token de NOAA. Se usara cache local si existe; de lo contrario, la descarga quedara vacia.')
+    return None
+""",
+        )
+
+        text = text.replace(
+            """    if cache_path.exists() and not force_refresh:
+        frame = pd.read_csv(cache_path, low_memory=False)
+        frame.attrs['record_count'] = len(frame)
+        return frame
+
+    rows = []
+""",
+            """    if cache_path.exists() and not force_refresh:
+        frame = pd.read_csv(cache_path, low_memory=False)
+        frame.attrs['record_count'] = len(frame)
+        return frame
+
+    if not token:
+        logger.warning(
+            'NOAA token missing; skipping fetch for dataset=%s datatype=%s station=%s',
+            dataset_id,
+            datatype_id,
+            station_id,
+        )
+        empty = pd.DataFrame()
+        empty.attrs['record_count'] = 0
+        return empty
+
+    rows = []
+""",
+        )
+
+        text = re.sub(
+            r"def discover_precip_datatypes\(dataset_id: str, token: str\) -> list\[str\]:.*?\n\n(?=def probe_station_source)",
+            """def discover_precip_datatypes(dataset_id: str, token: str | None = None) -> list[str]:
+    # Return explicit precipitation datatype candidates without any extra API probing.
+    if dataset_id == 'GHCND':
+        return ['PRCP']
+    if dataset_id == 'LCD':
+        return ['HPCP', 'PRCP']
+    return []
+
+""",
+            text,
+            flags=re.S,
+        )
+
+        text = text.replace(
+            """    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))
+    if cache_key in PROBE_CACHE:
+        return PROBE_CACHE[cache_key]
+""",
+            """    cache_key = (dataset_id, datatype_id, anchor_station_id, required_resolution, tuple(aliases))
+    if cache_key in PROBE_CACHE:
+        return PROBE_CACHE[cache_key]
+    if not token:
+        PROBE_CACHE[cache_key] = None
+        return None
+""",
+        )
+
+        text = re.sub(
+            r"def select_precip_source\(\n    token: str,\n    station_row: pd\.Series,\n    kind: str,\n\) -> dict \| None:\n.*?    return None\n\n(?=def audit_station_availability)",
+            """def select_precip_source(
+    token: str | None,
+    station_row: pd.Series,
+    kind: str,
+) -> dict | None:
+    station_id = str(station_row['station_id'])
+    station_name = str(station_row['station_name'])
+    aliases = station_aliases(station_id)
+    if kind == 'daily':
+        candidates = [('GHCND', 'PRCP'), ('LCD', 'PRCP')]
+        required_resolution = 'daily'
+    elif kind == 'hourly':
+        candidates = [('LCD', 'HPCP')]
+        required_resolution = 'hourly'
+    else:
+        raise ValueError(f'Unknown kind: {kind}')
+    for dataset_id, datatype_id in candidates:
+        probe = probe_station_source(
+            token=token,
+            dataset_id=dataset_id,
+            datatype_id=datatype_id,
+            anchor_station_id=station_id,
+            station_name=station_name,
+            aliases=aliases,
+            required_resolution=required_resolution,
+        )
+        if probe is not None:
+            probe['source_kind'] = kind
+            return probe
+    return None
+
+""",
+            text,
+            flags=re.S,
+        )
+
+        cell["source"] = [f"{line}\n" for line in text.rstrip("\n").splitlines()]
+        cell["outputs"] = []
+        cell["execution_count"] = None
+        break
+
+    NOTEBOOK_PATH.write_text(json.dumps(nb, ensure_ascii=False, indent=1))
+
+
 if __name__ == '__main__':
-    main()
+    patch_precipitation_notebook()
