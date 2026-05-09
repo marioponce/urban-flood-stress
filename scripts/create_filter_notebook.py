@@ -260,9 +260,15 @@ possible_event_like["label_strength"] = possible_event_like["unreported_confiden
     {"high": "weak_high", "medium": "weak_medium", "low": "weak_low"}
 )
 
-for col in balanced_df.columns:
-    if col not in possible_event_like.columns:
-        possible_event_like[col] = pd.NA
+missing_cols = [col for col in balanced_df.columns if col not in possible_event_like.columns]
+if missing_cols:
+    possible_event_like = pd.concat(
+        [
+            possible_event_like,
+            pd.DataFrame({col: pd.NA for col in missing_cols}, index=possible_event_like.index),
+        ],
+        axis=1,
+    )
 
 possible_event_like = possible_event_like[[col for col in balanced_df.columns] + [
     "possible_unreported_flood",
@@ -365,18 +371,18 @@ print(SEMI_SUPERVISED_PATH)"""
 
     cells.append(
         nbf.v4.new_markdown_cell(
-            """## Final Dataset to Analyze
+            """## Canonical Variable Frame
 
-Edit:
-- `SELECTED_VIEW_NAME`
-- `FIELDS_TO_ANALYZE`
-- `DROP_ROWS_WITH_MISSING_SELECTED_FIELDS`
+This section maps the current pipeline outputs into the conceptual variable names you want to use for real analysis.
 
-This last step adds:
-- `has_<field>` for every selected field
-- `has_all_selected_fields`
-
-and saves the version you really want to analyze."""
+Rules:
+- names are simplified and stable
+- time variables are derived from the event window
+- `resolution` is stored in **hours**
+- `max_tide` is the event-window maximum tide level in **meters**
+- `elevation` is mean street elevation
+- `shore_dist` is the currently available shoreline distance field
+- unavailable variables are kept as explicit columns with missing values so you can decide later whether to keep or drop them"""
         )
     )
 
@@ -388,51 +394,308 @@ and saves the version you really want to analyze."""
     "semi_supervised_pool": semi_supervised_pool_df,
 }
 
+def month_to_season(series: pd.Series) -> pd.Series:
+    mapping = {
+        12: "DJF", 1: "DJF", 2: "DJF",
+        3: "MAM", 4: "MAM", 5: "MAM",
+        6: "JJA", 7: "JJA", 8: "JJA",
+        9: "SON", 10: "SON", 11: "SON",
+    }
+    return pd.to_numeric(series, errors="coerce").map(mapping).astype("string")
+
+
 SELECTED_VIEW_NAME = "strict_main"
-FIELDS_TO_ANALYZE = [
-    "segment_id",
-    "segment_borough",
-    "event_start_local",
-    "event_window_duration_hours",
-    "dem_mean",
-    "shore_graph_steps",
-    "fema_fld_zone",
-    "census_median_household_income",
-    "prec_depth_total",
-    "tide_level_m_max",
-    "component_size",
-    "catch_basin_nearest_ft",
-]
+analysis_source_df = VIEW_LOOKUP[SELECTED_VIEW_NAME].copy()
+
+edge_betweenness_numeric = pd.to_numeric(analysis_source_df.get("segment_edge_betweenness"), errors="coerce")
+edge_betweenness_threshold = edge_betweenness_numeric.quantile(0.95) if edge_betweenness_numeric.notna().any() else np.nan
+
+analysis_feature_df = pd.DataFrame(
+    {
+        "event_id": analysis_source_df["event_id"].astype("string"),
+        "segment_id": analysis_source_df["segment_id"].astype("string"),
+        "analysis_view_name": SELECTED_VIEW_NAME,
+        "dataset_split_role": analysis_source_df["dataset_split_role"].astype("string"),
+        "label_definition": analysis_source_df["label_definition"].astype("string"),
+        "possible_unreported_flood": analysis_source_df["possible_unreported_flood"].fillna(False).astype("boolean"),
+        "occurrence": analysis_source_df["occurrence"],
+        "intensity": pd.to_numeric(analysis_source_df["intensity"], errors="coerce"),
+        "resolution": pd.to_numeric(analysis_source_df["resolution_hours"], errors="coerce"),
+        "resolution_bool": analysis_source_df["resolution_bool"].astype("boolean"),
+        "start": pd.to_datetime(analysis_source_df["event_start_local"], errors="coerce"),
+        "end": pd.to_datetime(analysis_source_df["event_end_local"], errors="coerce"),
+        "duration": pd.to_numeric(analysis_source_df["event_window_duration_hours"], errors="coerce"),
+        "month": pd.to_numeric(analysis_source_df["event_month"], errors="coerce").astype("Int64"),
+        "season": month_to_season(analysis_source_df["event_month"]),
+        "hour": pd.to_datetime(analysis_source_df["event_start_local"], errors="coerce").dt.hour.astype("Int64"),
+        "day_of_week": pd.to_datetime(analysis_source_df["event_start_local"], errors="coerce").dt.dayofweek.astype("Int64"),
+        "storm_event_id": analysis_source_df["storm_event_id"].astype("string"),
+        "n_prec": pd.to_numeric(analysis_source_df["n_prec"], errors="coerce"),
+        "prec_intensity_max": pd.to_numeric(analysis_source_df["prec_intensity_max"], errors="coerce"),
+        "prec_intensity_mean": pd.to_numeric(analysis_source_df["prec_intensity_mean"], errors="coerce"),
+        "prec_depth_total": pd.to_numeric(analysis_source_df["prec_depth_total"], errors="coerce"),
+        "prec_duration_total": pd.to_numeric(analysis_source_df["prec_duration_total"], errors="coerce"),
+        "max_tide": pd.to_numeric(analysis_source_df["tide_level_m_max"], errors="coerce"),
+        "elevation": pd.to_numeric(analysis_source_df["dem_mean"], errors="coerce"),
+        "slope": pd.to_numeric(analysis_source_df["dem_slope"], errors="coerce"),
+        "shore_dist": pd.to_numeric(analysis_source_df["shore_dist_ft"], errors="coerce"),
+        "fema_fld_zone": analysis_source_df["fema_fld_zone"].astype("string"),
+        "fema_zone_subty": analysis_source_df["fema_zone_subty"].astype("string"),
+        "fema_overlap_ft": pd.to_numeric(analysis_source_df["fema_overlap_ft"], errors="coerce"),
+        "fema_overlap_share": pd.to_numeric(analysis_source_df["fema_overlap_share"], errors="coerce"),
+        "fema_sfha_any": analysis_source_df["fema_sfha_any"].astype("boolean"),
+        "road_class": analysis_source_df["road_class"].astype("string"),
+        "travel_time": pd.to_numeric(analysis_source_df["segment_travel_time_s"], errors="coerce"),
+        "edge_betweenness": pd.to_numeric(analysis_source_df["segment_edge_betweenness"], errors="coerce"),
+        "component_count_after_removal": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "giant_component_size_after_removal": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "giant_component_size_loss": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "additional_disconnected_node_pairs": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "pct_giant_component_loss": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "high_network_criticality": edge_betweenness_numeric.ge(edge_betweenness_threshold).astype("boolean"),
+        "drainage_catch_basin_nearest_ft": pd.to_numeric(analysis_source_df["catch_basin_nearest_ft"], errors="coerce"),
+        "drainage_catch_basin_count_100ft": pd.to_numeric(analysis_source_df["catch_basin_count_100ft"], errors="coerce"),
+        "drainage_catch_basin_count_250ft": pd.to_numeric(analysis_source_df["catch_basin_count_250ft"], errors="coerce"),
+        "outfall_nearest_ft": pd.to_numeric(analysis_source_df["outfall_nearest_ft"], errors="coerce"),
+        "outfall_count_250ft": pd.to_numeric(analysis_source_df["outfall_count_250ft"], errors="coerce"),
+        "outfall_count_500ft": pd.to_numeric(analysis_source_df["outfall_count_500ft"], errors="coerce"),
+        "pump_nearest_ft": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "critical_infra_exposure": pd.Series(pd.NA, index=analysis_source_df.index, dtype="Float64"),
+        "census_geoid": analysis_source_df["census_geoid"].astype("string"),
+        "census_borough": analysis_source_df["census_borough"].astype("string"),
+        "census_poverty_rate": pd.to_numeric(analysis_source_df["census_poverty_rate"], errors="coerce"),
+        "census_renter_share": pd.to_numeric(analysis_source_df["census_renter_share"], errors="coerce"),
+        "census_no_vehicle_share": pd.to_numeric(analysis_source_df["census_no_vehicle_share"], errors="coerce"),
+        "census_median_household_income": pd.to_numeric(analysis_source_df["census_median_household_income"], errors="coerce"),
+        "gov_city": pd.Series("NEW YORK CITY", index=analysis_source_df.index, dtype="string"),
+        "gov_borough": analysis_source_df["segment_borough"].astype("string"),
+        "borough": analysis_source_df["segment_borough"].astype("string"),
+        "tide_polygon": analysis_source_df["tide_polygon_id"].astype("string"),
+        "tide_station": analysis_source_df["tide_id"].astype("string"),
+        "precipitation_polygon": analysis_source_df["precip_polygon_id"].astype("string"),
+        "precipitation_station": analysis_source_df["station_p_id"].astype("string"),
+    }
+)
+
+VARIABLE_GROUPS = {
+    "targets": ["occurrence", "intensity", "resolution", "resolution_bool"],
+    "event_time": ["start", "end", "duration", "month", "season", "hour", "day_of_week", "storm_event_id"],
+    "hydrometeorology": ["n_prec", "prec_intensity_max", "prec_intensity_mean", "prec_depth_total", "prec_duration_total", "max_tide"],
+    "terrain_coastal": ["elevation", "slope", "shore_dist", "fema_fld_zone", "fema_zone_subty", "fema_overlap_ft", "fema_overlap_share", "fema_sfha_any"],
+    "network": ["road_class", "travel_time", "edge_betweenness", "component_count_after_removal", "giant_component_size_after_removal", "giant_component_size_loss", "additional_disconnected_node_pairs", "pct_giant_component_loss", "high_network_criticality"],
+    "infrastructure": ["drainage_catch_basin_nearest_ft", "drainage_catch_basin_count_100ft", "drainage_catch_basin_count_250ft", "outfall_nearest_ft", "outfall_count_250ft", "outfall_count_500ft", "pump_nearest_ft", "critical_infra_exposure"],
+    "socioeconomic": ["census_geoid", "census_borough", "census_poverty_rate", "census_renter_share", "census_no_vehicle_share", "census_median_household_income"],
+    "governance": ["gov_city", "gov_borough"],
+    "spatial_controls": ["borough", "tide_polygon", "tide_station", "precipitation_polygon", "precipitation_station"],
+}
+
+field_catalog_rows = []
+for group_name, fields in VARIABLE_GROUPS.items():
+    for field in fields:
+        series = analysis_feature_df[field]
+        availability = float(series.notna().mean()) if len(series) else np.nan
+        field_catalog_rows.append(
+            {
+                "group": group_name,
+                "field": field,
+                "available_in_table": field in analysis_feature_df.columns,
+                "non_null_share": availability,
+            }
+        )
+
+field_catalog_df = pd.DataFrame(field_catalog_rows)
+display(field_catalog_df)"""
+        )
+    )
+
+    cells.append(
+        nbf.v4.new_markdown_cell(
+            """## Final Dataset to Analyze
+
+Set the following booleans to choose the variables you really want to keep.
+
+Convention:
+- `has_<field> = True` means keep that variable in the saved dataset
+- all are `True` by default
+- if a variable exists but is currently unavailable in the pipeline, it will still appear and you can switch it off if it is not useful for the current analysis"""
+        )
+    )
+
+    cells.append(
+        nbf.v4.new_code_cell(
+            """has_occurrence = True
+has_intensity = True
+has_resolution = True
+has_resolution_bool = True
+
+has_start = True
+has_end = True
+has_duration = True
+has_month = True
+has_season = True
+has_hour = True
+has_day_of_week = True
+has_storm_event_id = True
+
+has_n_prec = True
+has_prec_intensity_max = True
+has_prec_intensity_mean = True
+has_prec_depth_total = True
+has_prec_duration_total = True
+has_max_tide = True
+
+has_elevation = True
+has_slope = True
+has_shore_dist = True
+has_fema_fld_zone = True
+has_fema_zone_subty = True
+has_fema_overlap_ft = True
+has_fema_overlap_share = True
+has_fema_sfha_any = True
+
+has_road_class = True
+has_travel_time = True
+has_edge_betweenness = True
+has_component_count_after_removal = True
+has_giant_component_size_after_removal = True
+has_giant_component_size_loss = True
+has_additional_disconnected_node_pairs = True
+has_pct_giant_component_loss = True
+has_high_network_criticality = True
+
+has_drainage_catch_basin_nearest_ft = True
+has_drainage_catch_basin_count_100ft = True
+has_drainage_catch_basin_count_250ft = True
+has_outfall_nearest_ft = True
+has_outfall_count_250ft = True
+has_outfall_count_500ft = True
+has_pump_nearest_ft = True
+has_critical_infra_exposure = True
+
+has_census_geoid = True
+has_census_borough = True
+has_census_poverty_rate = True
+has_census_renter_share = True
+has_census_no_vehicle_share = True
+has_census_median_household_income = True
+
+has_gov_city = True
+has_gov_borough = True
+
+has_borough = True
+has_tide_polygon = True
+has_tide_station = True
+has_precipitation_polygon = True
+has_precipitation_station = True
+
 DROP_ROWS_WITH_MISSING_SELECTED_FIELDS = False
 
-def has_value(series: pd.Series) -> pd.Series:
+FIELD_SELECTION = {
+    "occurrence": has_occurrence,
+    "intensity": has_intensity,
+    "resolution": has_resolution,
+    "resolution_bool": has_resolution_bool,
+    "start": has_start,
+    "end": has_end,
+    "duration": has_duration,
+    "month": has_month,
+    "season": has_season,
+    "hour": has_hour,
+    "day_of_week": has_day_of_week,
+    "storm_event_id": has_storm_event_id,
+    "n_prec": has_n_prec,
+    "prec_intensity_max": has_prec_intensity_max,
+    "prec_intensity_mean": has_prec_intensity_mean,
+    "prec_depth_total": has_prec_depth_total,
+    "prec_duration_total": has_prec_duration_total,
+    "max_tide": has_max_tide,
+    "elevation": has_elevation,
+    "slope": has_slope,
+    "shore_dist": has_shore_dist,
+    "fema_fld_zone": has_fema_fld_zone,
+    "fema_zone_subty": has_fema_zone_subty,
+    "fema_overlap_ft": has_fema_overlap_ft,
+    "fema_overlap_share": has_fema_overlap_share,
+    "fema_sfha_any": has_fema_sfha_any,
+    "road_class": has_road_class,
+    "travel_time": has_travel_time,
+    "edge_betweenness": has_edge_betweenness,
+    "component_count_after_removal": has_component_count_after_removal,
+    "giant_component_size_after_removal": has_giant_component_size_after_removal,
+    "giant_component_size_loss": has_giant_component_size_loss,
+    "additional_disconnected_node_pairs": has_additional_disconnected_node_pairs,
+    "pct_giant_component_loss": has_pct_giant_component_loss,
+    "high_network_criticality": has_high_network_criticality,
+    "drainage_catch_basin_nearest_ft": has_drainage_catch_basin_nearest_ft,
+    "drainage_catch_basin_count_100ft": has_drainage_catch_basin_count_100ft,
+    "drainage_catch_basin_count_250ft": has_drainage_catch_basin_count_250ft,
+    "outfall_nearest_ft": has_outfall_nearest_ft,
+    "outfall_count_250ft": has_outfall_count_250ft,
+    "outfall_count_500ft": has_outfall_count_500ft,
+    "pump_nearest_ft": has_pump_nearest_ft,
+    "critical_infra_exposure": has_critical_infra_exposure,
+    "census_geoid": has_census_geoid,
+    "census_borough": has_census_borough,
+    "census_poverty_rate": has_census_poverty_rate,
+    "census_renter_share": has_census_renter_share,
+    "census_no_vehicle_share": has_census_no_vehicle_share,
+    "census_median_household_income": has_census_median_household_income,
+    "gov_city": has_gov_city,
+    "gov_borough": has_gov_borough,
+    "borough": has_borough,
+    "tide_polygon": has_tide_polygon,
+    "tide_station": has_tide_station,
+    "precipitation_polygon": has_precipitation_polygon,
+    "precipitation_station": has_precipitation_station,
+}
+
+selected_fields = [field for field, keep in FIELD_SELECTION.items() if keep]
+selection_summary = pd.DataFrame(
+    {
+        "field": list(FIELD_SELECTION.keys()),
+        "selected": list(FIELD_SELECTION.values()),
+    }
+).merge(field_catalog_df, on="field", how="left")
+
+analysis_df = analysis_feature_df.copy()
+analysis_df["analysis_view_name"] = SELECTED_VIEW_NAME
+
+mandatory_fields = [
+    "event_id",
+    "segment_id",
+    "analysis_view_name",
+    "dataset_split_role",
+    "label_definition",
+    "possible_unreported_flood",
+]
+
+def value_is_present(series: pd.Series) -> pd.Series:
     if pd.api.types.is_string_dtype(series) or series.dtype == object:
         return series.notna() & series.astype("string").str.strip().ne("")
     return series.notna()
 
-analysis_df = VIEW_LOOKUP[SELECTED_VIEW_NAME].copy()
-analysis_df["analysis_view_name"] = SELECTED_VIEW_NAME
+present_columns = []
+for field in selected_fields:
+    present_col = f"present_{field}"
+    analysis_df[present_col] = value_is_present(analysis_df[field]).astype("boolean")
+    present_columns.append(present_col)
 
-has_columns = []
-for field in FIELDS_TO_ANALYZE:
-    has_col = f"has_{field}"
-    if field in analysis_df.columns:
-        analysis_df[has_col] = has_value(analysis_df[field]).astype("boolean")
-    else:
-        analysis_df[has_col] = False
-    has_columns.append(has_col)
-
-analysis_df["has_all_selected_fields"] = analysis_df[has_columns].fillna(False).all(axis=1)
+analysis_df["has_all_selected_fields"] = analysis_df[present_columns].fillna(False).all(axis=1)
 
 if DROP_ROWS_WITH_MISSING_SELECTED_FIELDS:
     analysis_df = analysis_df.loc[analysis_df["has_all_selected_fields"]].copy()
 
-FINAL_ANALYSIS_PATH = FILTERED_DIR / f"final_analysis_{SELECTED_VIEW_NAME}.parquet"
-analysis_df.to_parquet(FINAL_ANALYSIS_PATH, index=False)
+final_columns = mandatory_fields + selected_fields + present_columns + ["has_all_selected_fields"]
+final_columns = [col for col in final_columns if col in analysis_df.columns]
+final_analysis_df = analysis_df[final_columns].copy()
 
-display(analysis_df[["event_id", "segment_id", "occurrence", "possible_unreported_flood", "analysis_view_name", "has_all_selected_fields"] + has_columns].head(20))
+FINAL_ANALYSIS_PATH = FILTERED_DIR / f"final_analysis_{SELECTED_VIEW_NAME}.parquet"
+final_analysis_df.to_parquet(FINAL_ANALYSIS_PATH, index=False)
+
+display(selection_summary)
+display(final_analysis_df.head(20))
 print(FINAL_ANALYSIS_PATH)
-print(f"rows saved: {len(analysis_df):,}")"""
+print(f"rows saved: {len(final_analysis_df):,}")"""
         )
     )
 

@@ -1,0 +1,1455 @@
+[drwxrwxr-x map10194 4.0K]  .
+├── [-rw-rw-r-- map10194  21K]  ./aaa.md
+├── [drwxr-xr-x map10194 4.0K]  ./.agents
+├── [-rw-rw-r-- map10194  412]  ./CHANGELOG.md
+├── [-rw-rw-r-- map10194  890]  ./CITATION.cff
+├── [drwxr-xr-x map10194 4.0K]  ./.codex
+├── [drwxrwxr-x map10194 4.0K]  ./data
+│   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/311
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/311/cache
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/311/cache/street_flooding_raw
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 8.6K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 9.4K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  19K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  16K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2020_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  10K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 9.3K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  19K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  27K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  19K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  10K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2021_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  18K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2022_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  18K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  34K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2023_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  17K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 9.5K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2024_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  10K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_04.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  16K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_05.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_06.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_07.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_08.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_09.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  34K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_10.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_11.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  15K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2025_12.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  11K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2026_01.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2026_02.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  19K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2026_03.parquet
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  14K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2026_04.parquet
+│   │   │   │   │       └── [-rw-rw-r-- map10194 8.9K]  ./data/processed/311/cache/street_flooding_raw/t9hb-ip2a/t9hb-ip2a_2026_05.parquet
+│   │   │   │   └── [-rw-rw-r-- map10194 344K]  ./data/processed/311/cache/street_flooding_raw_master.parquet
+│   │   │   ├── [-rw-rw-r-- map10194 2.7M]  ./data/processed/311/flood_events.csv
+│   │   │   └── [-rw-rw-r-- map10194 8.1M]  ./data/processed/311/individual_complaints.csv
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/census
+│   │   │   ├── [-rw-r--r-- map10194  13M]  ./data/processed/census/acs_2007_2011_tiger2011.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  17M]  ./data/processed/census/acs_2008_2012_tiger2012.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  17M]  ./data/processed/census/acs_2009_2013_tiger2013.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  17M]  ./data/processed/census/acs_2010_2014_tiger2014.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  19M]  ./data/processed/census/acs_2011_2015_tiger2015.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  19M]  ./data/processed/census/acs_2012_2016_tiger2016.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  19M]  ./data/processed/census/acs_2013_2017_tiger2017.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  19M]  ./data/processed/census/acs_2014_2018_tiger2018.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  19M]  ./data/processed/census/acs_2015_2019_tiger2019.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  20M]  ./data/processed/census/acs_2016_2020_tiger2020.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  20M]  ./data/processed/census/acs_2017_2021_tiger2021.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  20M]  ./data/processed/census/acs_2018_2022_tiger2022.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  20M]  ./data/processed/census/acs_2019_2023_tiger2023.gpkg
+│   │   │   ├── [-rw-r--r-- map10194  20M]  ./data/processed/census/acs_2020_2024_tiger2024.gpkg
+│   │   │   ├── [-rw-rw-r-- map10194 2.1K]  ./data/processed/census/census_period_metadata.csv
+│   │   │   └── [-rw-rw-r-- map10194  210]  ./data/processed/census/census_processing_log.csv
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/infrastructure
+│   │   │   ├── [-rw-r--r-- map10194  35M]  ./data/processed/infrastructure/catch_basins.gpkg
+│   │   │   ├── [-rw-rw-r-- map10194  754]  ./data/processed/infrastructure/infrastructure_download_summary.csv
+│   │   │   └── [-rw-r--r-- map10194 1.5M]  ./data/processed/infrastructure/outfalls.gpkg
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling
+│   │   │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/processed/modeling/anomaly_event_scores.parquet
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/bayesian
+│   │   │   ├── [-rw-rw-r-- map10194 9.7K]  ./data/processed/modeling/best_intensity_model.joblib
+│   │   │   ├── [-rw-rw-r-- map10194 7.5K]  ./data/processed/modeling/bias_diagnostics_intensity.csv
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/clustering
+│   │   │   ├── [-rw-rw-r-- map10194 6.4M]  ./data/processed/modeling/clustering_event_archetypes.geoparquet
+│   │   │   ├── [-rw-rw-r-- map10194 5.8M]  ./data/processed/modeling/clustering_event_archetypes.parquet
+│   │   │   ├── [-rw-rw-r-- map10194  14K]  ./data/processed/modeling/clustering_model_selection.csv
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics/balancing
+│   │   │   │   │   ├── [-rw-rw-r-- map10194  287]  ./data/processed/modeling/diagnostics/balancing/balancing_metadata.json
+│   │   │   │   │   ├── [-rw-rw-r-- map10194   91]  ./data/processed/modeling/diagnostics/balancing/leakage_checks.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194 3.0M]  ./data/processed/modeling/diagnostics/balancing/negative_sampling_event_diagnostics.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194   52]  ./data/processed/modeling/diagnostics/balancing/negative_sampling_level_distribution.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194 3.5K]  ./data/processed/modeling/diagnostics/balancing/positive_negative_distribution_checks.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7K]  ./data/processed/modeling/diagnostics/balancing/positive_negative_numeric_distribution_checks.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194  31M]  ./data/processed/modeling/diagnostics/balancing/segment_universe_sampling.geoparquet
+│   │   │   │   │   ├── [-rw-rw-r-- map10194 8.6K]  ./data/processed/modeling/diagnostics/balancing/storm_event_summary.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194   98]  ./data/processed/modeling/diagnostics/balancing/unreported_by_borough.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194   91]  ./data/processed/modeling/diagnostics/balancing/unreported_by_precip_polygon.csv
+│   │   │   │   │   ├── [-rw-rw-r-- map10194   56]  ./data/processed/modeling/diagnostics/balancing/unreported_by_tide_polygon.csv
+│   │   │   │   │   └── [-rw-rw-r-- map10194   65]  ./data/processed/modeling/diagnostics/balancing/unreported_confidence_distribution.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  387]  ./data/processed/modeling/diagnostics/build_metadata.json
+│   │   │   │   ├── [-rw-rw-r-- map10194  364]  ./data/processed/modeling/diagnostics/census_diagnostics.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194 172K]  ./data/processed/modeling/diagnostics/complaint_assignment_diagnostics.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  14K]  ./data/processed/modeling/diagnostics/correlation_summary.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  101]  ./data/processed/modeling/diagnostics/fema_diagnostics.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  159]  ./data/processed/modeling/diagnostics/infrastructure_diagnostics.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194 4.5K]  ./data/processed/modeling/diagnostics/missingness_report.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics/modeling_stage
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints
+│   │   │   │   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 6.8K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/results_so_far.csv
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 9.7K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__dummy_regressor.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 593K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__dummy_regressor__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 645K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__gradient_boosting_regressor.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 929K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__gradient_boosting_regressor__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194  11K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__linear_regression.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 931K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__linear_regression__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194  11K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__poisson_regressor.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 931K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__poisson_regressor__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 8.5M]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__random_forest_regressor.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 931K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__random_forest_regressor__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194  10K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__ridge.joblib
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194 930K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__ridge__predictions.parquet
+│   │   │   │   │       │   ├── [-rw-rw-r-- map10194  11K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__tweedie_regressor.joblib
+│   │   │   │   │       │   └── [-rw-rw-r-- map10194 931K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/intensity/stratified_75_15_10__tweedie_regressor__predictions.parquet
+│   │   │   │   │       └── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence
+│   │   │   │   │           ├── [-rw-rw-r-- map10194 4.8K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/results_so_far.csv
+│   │   │   │   │           ├── [-rw-rw-r-- map10194 282K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__decision_tree.joblib
+│   │   │   │   │           ├── [-rw-rw-r-- map10194 1.3M]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__decision_tree__predictions.parquet
+│   │   │   │   │           ├── [-rw-rw-r-- map10194  11K]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__logistic_regression.joblib
+│   │   │   │   │           ├── [-rw-rw-r-- map10194 1.9M]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__logistic_regression__predictions.parquet
+│   │   │   │   │           ├── [-rw-rw-r-- map10194 798M]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__random_forest.joblib
+│   │   │   │   │           └── [-rw-rw-r-- map10194 1.3M]  ./data/processed/modeling/diagnostics/modeling_stage/checkpoints/occurrence/stratified_75_15_10__random_forest__predictions.parquet
+│   │   │   │   ├── [-rw-rw-r-- map10194  10K]  ./data/processed/modeling/diagnostics/numeric_summary.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  179]  ./data/processed/modeling/diagnostics/precipitation_diagnostics.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  52K]  ./data/processed/modeling/diagnostics/segment_component_summary.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194 8.6K]  ./data/processed/modeling/diagnostics/storm_event_summary.csv
+│   │   │   │   ├── [-rw-rw-r-- map10194  109]  ./data/processed/modeling/diagnostics/tide_diagnostics.csv
+│   │   │   │   └── [-rw-rw-r-- map10194  290]  ./data/processed/modeling/diagnostics/validation_checks.csv
+│   │   │   ├── [-rw-rw-r-- map10194 2.3K]  ./data/processed/modeling/feature_importance_intensity.csv
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/filtered
+│   │   │   │   ├── [-rw-rw-r-- map10194 5.9M]  ./data/processed/modeling/filtered/final_analysis_strict_main.parquet
+│   │   │   │   ├── [-rw-rw-r-- map10194  26M]  ./data/processed/modeling/filtered/main_plus_high_conf_possible.parquet
+│   │   │   │   ├── [-rw-rw-r-- map10194  26M]  ./data/processed/modeling/filtered/semi_supervised_pool.parquet
+│   │   │   │   └── [-rw-rw-r-- map10194  18M]  ./data/processed/modeling/filtered/strict_main.parquet
+│   │   │   ├── [-rw-rw-r-- map10194  20M]  ./data/processed/modeling/flood_events_balanced.geoparquet
+│   │   │   ├── [-rw-rw-r-- map10194  18M]  ./data/processed/modeling/flood_events_balanced.parquet
+│   │   │   ├── [-rw-rw-r-- map10194 9.7M]  ./data/processed/modeling/flood_events_master_table.geoparquet
+│   │   │   ├── [-rw-rw-r-- map10194 9.1M]  ./data/processed/modeling/flood_events_master_table.parquet
+│   │   │   ├── [-rw-rw-r-- map10194 7.4K]  ./data/processed/modeling/leakage_audit_intensity.csv
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/modeling/ml
+│   │   │   ├── [-rw-rw-r-- map10194 6.3M]  ./data/processed/modeling/possible_unreported_flood_candidates.geoparquet
+│   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/processed/modeling/possible_unreported_flood_candidates.parquet
+│   │   │   ├── [-rw-rw-r-- map10194 3.8M]  ./data/processed/modeling/predictions_intensity_ml.parquet
+│   │   │   ├── [-rw-rw-r-- map10194 6.8K]  ./data/processed/modeling/results_intensity_ml.csv
+│   │   │   ├── [-rw-rw-r-- map10194  507]  ./data/processed/modeling/validation_balancing.csv
+│   │   │   ├── [-rw-rw-r-- map10194  165]  ./data/processed/modeling/validation_master_table.csv
+│   │   │   └── [-rw-rw-r-- map10194  161]  ./data/processed/modeling/validation_unreported_candidates.csv
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/noaa
+│   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/processed/noaa/cache
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation/daily
+│   │       │   ├── [-rw-rw-r-- map10194   69]  ./data/processed/precipitation/daily/daily_annual_summary.csv
+│   │       │   ├── [-rw-rw-r-- map10194   71]  ./data/processed/precipitation/daily/daily_monthly_summary.csv
+│   │       │   ├── [-rw-rw-r-- map10194  136]  ./data/processed/precipitation/daily/daily_precipitation_records.csv
+│   │       │   └── [-rw-rw-r-- map10194  176]  ./data/processed/precipitation/daily/daily_station_summary.csv
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation/events_daily
+│   │       │   └── [-rw-rw-r-- map10194  181]  ./data/processed/precipitation/events_daily/daily_wet_spell_events.csv
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation/events_hourly
+│   │       │   ├── [-rw-rw-r-- map10194  181]  ./data/processed/precipitation/events_hourly/hourly_storm_events.csv
+│   │       │   └── [-rw-rw-r-- map10194 508K]  ./data/processed/precipitation/events_hourly/precipitation_events.csv
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation/hourly
+│   │       │   ├── [-rw-rw-r-- map10194  136]  ./data/processed/precipitation/hourly/hourly_precipitation_records.csv
+│   │       │   ├── [-rw-rw-r-- map10194  176]  ./data/processed/precipitation/hourly/hourly_station_summary.csv
+│   │       │   └── [-rw-rw-r-- map10194  43M]  ./data/processed/precipitation/hourly/precipitation_records.csv
+│   │       └── [drwxrwxr-x map10194 4.0K]  ./data/processed/precipitation/station_availability
+│   │           ├── [-rw-rw-r-- map10194 5.8K]  ./data/processed/precipitation/station_availability/station_precipitation_availability.csv
+│   │           ├── [-rw-r--r-- map10194 108K]  ./data/processed/precipitation/station_availability/station_precipitation_availability.gpkg
+│   │           ├── [-rw-rw-r-- map10194 5.4K]  ./data/processed/precipitation/station_availability/station_precipitation_availability_probe.csv
+│   │           ├── [-rw-r--r-- map10194 108K]  ./data/processed/precipitation/station_availability/station_precipitation_availability_probe.gpkg
+│   │           ├── [-rw-r--r-- map10194 108K]  ./data/processed/precipitation/station_availability/station_precipitation_availability_probe_projected.gpkg
+│   │           └── [-rw-r--r-- map10194 108K]  ./data/processed/precipitation/station_availability/station_precipitation_availability_projected.gpkg
+│   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census
+│   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2006_2010
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2006_2010/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 640K]  ./data/raw/census/acs/2006_2010/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 559K]  ./data/raw/census/acs/2006_2010/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/raw/census/acs/2006_2010/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 569K]  ./data/raw/census/acs/2006_2010/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2006_2010/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2006_2010/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 405K]  ./data/raw/census/acs/2006_2010/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 483K]  ./data/raw/census/acs/2006_2010/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 407K]  ./data/raw/census/acs/2006_2010/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 587K]  ./data/raw/census/acs/2006_2010/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 546K]  ./data/raw/census/acs/2006_2010/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 529K]  ./data/raw/census/acs/2006_2010/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 620K]  ./data/raw/census/acs/2006_2010/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2006_2010/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.1M]  ./data/raw/census/acs/2006_2010/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/raw/census/acs/2006_2010/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/acs/2006_2010/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2006_2010/acs_acs5_subject
+│   │   │   │   │       └── [-rw-rw-r-- map10194 3.3M]  ./data/raw/census/acs/2006_2010/acs_acs5_subject/S1501.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2007_2011
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2007_2011/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 634K]  ./data/raw/census/acs/2007_2011/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2007_2011/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2007_2011/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 562K]  ./data/raw/census/acs/2007_2011/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2007_2011/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2007_2011/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2007_2011/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2007_2011/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 407K]  ./data/raw/census/acs/2007_2011/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2007_2011/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2007_2011/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 525K]  ./data/raw/census/acs/2007_2011/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2007_2011/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2007_2011/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.0M]  ./data/raw/census/acs/2007_2011/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/raw/census/acs/2007_2011/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2007_2011/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2007_2011/acs_acs5_subject
+│   │   │   │   │       └── [-rw-rw-r-- map10194 3.3M]  ./data/raw/census/acs/2007_2011/acs_acs5_subject/S1501.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2008_2012
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2008_2012/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 634K]  ./data/raw/census/acs/2008_2012/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2008_2012/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2008_2012/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 562K]  ./data/raw/census/acs/2008_2012/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2008_2012/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2008_2012/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2008_2012/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2008_2012/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2008_2012/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2008_2012/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2008_2012/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 524K]  ./data/raw/census/acs/2008_2012/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2008_2012/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2008_2012/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.4M]  ./data/raw/census/acs/2008_2012/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2008_2012/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2008_2012/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2008_2012/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 3.3M]  ./data/raw/census/acs/2008_2012/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 4.0M]  ./data/raw/census/acs/2008_2012/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.6M]  ./data/raw/census/acs/2008_2012/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2009_2013
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2009_2013/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 634K]  ./data/raw/census/acs/2009_2013/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2009_2013/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2009_2013/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 562K]  ./data/raw/census/acs/2009_2013/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2009_2013/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2009_2013/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2009_2013/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2009_2013/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2009_2013/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2009_2013/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2009_2013/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 524K]  ./data/raw/census/acs/2009_2013/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2009_2013/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2009_2013/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.8M]  ./data/raw/census/acs/2009_2013/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2009_2013/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2009_2013/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2009_2013/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 3.3M]  ./data/raw/census/acs/2009_2013/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 4.0M]  ./data/raw/census/acs/2009_2013/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.6M]  ./data/raw/census/acs/2009_2013/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2010_2014
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2010_2014/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 635K]  ./data/raw/census/acs/2010_2014/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2010_2014/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2010_2014/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 562K]  ./data/raw/census/acs/2010_2014/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2010_2014/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2010_2014/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2010_2014/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2010_2014/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2010_2014/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2010_2014/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2010_2014/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 525K]  ./data/raw/census/acs/2010_2014/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 607K]  ./data/raw/census/acs/2010_2014/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2010_2014/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.7M]  ./data/raw/census/acs/2010_2014/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2010_2014/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2010_2014/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2010_2014/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 3.3M]  ./data/raw/census/acs/2010_2014/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 4.0M]  ./data/raw/census/acs/2010_2014/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.6M]  ./data/raw/census/acs/2010_2014/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2011_2015
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2011_2015/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 838K]  ./data/raw/census/acs/2011_2015/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2011_2015/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2011_2015/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 562K]  ./data/raw/census/acs/2011_2015/acs_acs5/B16002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2011_2015/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2011_2015/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2011_2015/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2011_2015/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2011_2015/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2011_2015/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2011_2015/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 540K]  ./data/raw/census/acs/2011_2015/acs_acs5/B25034.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 607K]  ./data/raw/census/acs/2011_2015/acs_acs5/B25044.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2011_2015/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.7M]  ./data/raw/census/acs/2011_2015/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2011_2015/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2011_2015/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2011_2015/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2011_2015/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.1M]  ./data/raw/census/acs/2011_2015/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.8M]  ./data/raw/census/acs/2011_2015/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2012_2016
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2012_2016/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 838K]  ./data/raw/census/acs/2012_2016/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 556K]  ./data/raw/census/acs/2012_2016/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2012_2016/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2012_2016/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2012_2016/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2012_2016/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 482K]  ./data/raw/census/acs/2012_2016/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2012_2016/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2012_2016/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2012_2016/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 540K]  ./data/raw/census/acs/2012_2016/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 607K]  ./data/raw/census/acs/2012_2016/acs_acs5/B25044.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 594K]  ./data/raw/census/acs/2012_2016/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2012_2016/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.7M]  ./data/raw/census/acs/2012_2016/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2012_2016/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2012_2016/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2012_2016/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2012_2016/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.1M]  ./data/raw/census/acs/2012_2016/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.8M]  ./data/raw/census/acs/2012_2016/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2013_2017
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2013_2017/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 839K]  ./data/raw/census/acs/2013_2017/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 557K]  ./data/raw/census/acs/2013_2017/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2013_2017/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2013_2017/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2013_2017/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2013_2017/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 483K]  ./data/raw/census/acs/2013_2017/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2013_2017/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2013_2017/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2013_2017/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 540K]  ./data/raw/census/acs/2013_2017/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2013_2017/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 586K]  ./data/raw/census/acs/2013_2017/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 594K]  ./data/raw/census/acs/2013_2017/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2013_2017/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.5M]  ./data/raw/census/acs/2013_2017/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.3M]  ./data/raw/census/acs/2013_2017/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2013_2017/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2013_2017/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2013_2017/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.1M]  ./data/raw/census/acs/2013_2017/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.8M]  ./data/raw/census/acs/2013_2017/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2014_2018
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2014_2018/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 839K]  ./data/raw/census/acs/2014_2018/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 557K]  ./data/raw/census/acs/2014_2018/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2014_2018/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2014_2018/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2014_2018/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2014_2018/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 483K]  ./data/raw/census/acs/2014_2018/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2014_2018/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 578K]  ./data/raw/census/acs/2014_2018/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2014_2018/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 541K]  ./data/raw/census/acs/2014_2018/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2014_2018/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 586K]  ./data/raw/census/acs/2014_2018/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 594K]  ./data/raw/census/acs/2014_2018/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2014_2018/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.4M]  ./data/raw/census/acs/2014_2018/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.3M]  ./data/raw/census/acs/2014_2018/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/acs/2014_2018/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2014_2018/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2014_2018/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.1M]  ./data/raw/census/acs/2014_2018/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.8M]  ./data/raw/census/acs/2014_2018/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2015_2019
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2015_2019/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 839K]  ./data/raw/census/acs/2015_2019/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 558K]  ./data/raw/census/acs/2015_2019/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.7M]  ./data/raw/census/acs/2015_2019/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.3M]  ./data/raw/census/acs/2015_2019/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 375K]  ./data/raw/census/acs/2015_2019/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 404K]  ./data/raw/census/acs/2015_2019/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 483K]  ./data/raw/census/acs/2015_2019/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 407K]  ./data/raw/census/acs/2015_2019/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 579K]  ./data/raw/census/acs/2015_2019/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 538K]  ./data/raw/census/acs/2015_2019/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 541K]  ./data/raw/census/acs/2015_2019/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 608K]  ./data/raw/census/acs/2015_2019/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 586K]  ./data/raw/census/acs/2015_2019/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 595K]  ./data/raw/census/acs/2015_2019/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2015_2019/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 7.5M]  ./data/raw/census/acs/2015_2019/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2015_2019/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/acs/2015_2019/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2015_2019/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  12M]  ./data/raw/census/acs/2015_2019/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.0M]  ./data/raw/census/acs/2015_2019/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 4.8M]  ./data/raw/census/acs/2015_2019/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2016_2020
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2016_2020/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 900K]  ./data/raw/census/acs/2016_2020/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 602K]  ./data/raw/census/acs/2016_2020/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/raw/census/acs/2016_2020/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2016_2020/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 405K]  ./data/raw/census/acs/2016_2020/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 437K]  ./data/raw/census/acs/2016_2020/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 521K]  ./data/raw/census/acs/2016_2020/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 439K]  ./data/raw/census/acs/2016_2020/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 624K]  ./data/raw/census/acs/2016_2020/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 581K]  ./data/raw/census/acs/2016_2020/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 584K]  ./data/raw/census/acs/2016_2020/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 656K]  ./data/raw/census/acs/2016_2020/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 632K]  ./data/raw/census/acs/2016_2020/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 640K]  ./data/raw/census/acs/2016_2020/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2016_2020/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.6M]  ./data/raw/census/acs/2016_2020/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.9M]  ./data/raw/census/acs/2016_2020/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.8M]  ./data/raw/census/acs/2016_2020/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2016_2020/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2016_2020/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.4M]  ./data/raw/census/acs/2016_2020/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 5.2M]  ./data/raw/census/acs/2016_2020/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2017_2021
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2017_2021/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 901K]  ./data/raw/census/acs/2017_2021/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 603K]  ./data/raw/census/acs/2017_2021/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.9M]  ./data/raw/census/acs/2017_2021/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2017_2021/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 406K]  ./data/raw/census/acs/2017_2021/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 437K]  ./data/raw/census/acs/2017_2021/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 522K]  ./data/raw/census/acs/2017_2021/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 440K]  ./data/raw/census/acs/2017_2021/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 625K]  ./data/raw/census/acs/2017_2021/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 582K]  ./data/raw/census/acs/2017_2021/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 584K]  ./data/raw/census/acs/2017_2021/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 656K]  ./data/raw/census/acs/2017_2021/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 632K]  ./data/raw/census/acs/2017_2021/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 641K]  ./data/raw/census/acs/2017_2021/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2017_2021/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2017_2021/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.9M]  ./data/raw/census/acs/2017_2021/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.8M]  ./data/raw/census/acs/2017_2021/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2017_2021/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2017_2021/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.5M]  ./data/raw/census/acs/2017_2021/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 5.2M]  ./data/raw/census/acs/2017_2021/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2018_2022
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2018_2022/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 892K]  ./data/raw/census/acs/2018_2022/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 594K]  ./data/raw/census/acs/2018_2022/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/raw/census/acs/2018_2022/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2018_2022/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 397K]  ./data/raw/census/acs/2018_2022/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 429K]  ./data/raw/census/acs/2018_2022/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 513K]  ./data/raw/census/acs/2018_2022/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 431K]  ./data/raw/census/acs/2018_2022/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 616K]  ./data/raw/census/acs/2018_2022/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 573K]  ./data/raw/census/acs/2018_2022/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 576K]  ./data/raw/census/acs/2018_2022/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 648K]  ./data/raw/census/acs/2018_2022/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 623K]  ./data/raw/census/acs/2018_2022/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 633K]  ./data/raw/census/acs/2018_2022/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2018_2022/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2018_2022/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.9M]  ./data/raw/census/acs/2018_2022/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.8M]  ./data/raw/census/acs/2018_2022/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2018_2022/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2018_2022/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.5M]  ./data/raw/census/acs/2018_2022/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 5.2M]  ./data/raw/census/acs/2018_2022/acs_acs5_subject/S1810.csv
+│   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2019_2023
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2019_2023/acs_acs5
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 892K]  ./data/raw/census/acs/2019_2023/acs_acs5/B05002.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 595K]  ./data/raw/census/acs/2019_2023/acs_acs5/B11007.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/raw/census/acs/2019_2023/acs_acs5/B15001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2019_2023/acs_acs5/B17001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 397K]  ./data/raw/census/acs/2019_2023/acs_acs5/B19013.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 429K]  ./data/raw/census/acs/2019_2023/acs_acs5/B19057.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 514K]  ./data/raw/census/acs/2019_2023/acs_acs5/B22001.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 431K]  ./data/raw/census/acs/2019_2023/acs_acs5/B25003.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 616K]  ./data/raw/census/acs/2019_2023/acs_acs5/B25014.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 573K]  ./data/raw/census/acs/2019_2023/acs_acs5/B25024.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 576K]  ./data/raw/census/acs/2019_2023/acs_acs5/B25034.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 648K]  ./data/raw/census/acs/2019_2023/acs_acs5/B25044.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 623K]  ./data/raw/census/acs/2019_2023/acs_acs5/B28002.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 633K]  ./data/raw/census/acs/2019_2023/acs_acs5/C16002.csv
+│   │   │   │   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2019_2023/acs_acs5_profile
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2019_2023/acs_acs5_profile/DP02.csv
+│   │   │   │   │   │   ├── [-rw-rw-r-- map10194 8.9M]  ./data/raw/census/acs/2019_2023/acs_acs5_profile/DP03.csv
+│   │   │   │   │   │   └── [-rw-rw-r-- map10194 7.8M]  ./data/raw/census/acs/2019_2023/acs_acs5_profile/DP04.csv
+│   │   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2019_2023/acs_acs5_subject
+│   │   │   │   │       ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2019_2023/acs_acs5_subject/S1501.csv
+│   │   │   │   │       ├── [-rw-rw-r-- map10194 5.5M]  ./data/raw/census/acs/2019_2023/acs_acs5_subject/S1701.csv
+│   │   │   │   │       └── [-rw-rw-r-- map10194 5.2M]  ./data/raw/census/acs/2019_2023/acs_acs5_subject/S1810.csv
+│   │   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2020_2024
+│   │   │   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2020_2024/acs_acs5
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 892K]  ./data/raw/census/acs/2020_2024/acs_acs5/B05002.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 595K]  ./data/raw/census/acs/2020_2024/acs_acs5/B11007.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 1.8M]  ./data/raw/census/acs/2020_2024/acs_acs5/B15001.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 1.4M]  ./data/raw/census/acs/2020_2024/acs_acs5/B17001.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 397K]  ./data/raw/census/acs/2020_2024/acs_acs5/B19013.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 429K]  ./data/raw/census/acs/2020_2024/acs_acs5/B19057.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 514K]  ./data/raw/census/acs/2020_2024/acs_acs5/B22001.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 431K]  ./data/raw/census/acs/2020_2024/acs_acs5/B25003.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 617K]  ./data/raw/census/acs/2020_2024/acs_acs5/B25014.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 574K]  ./data/raw/census/acs/2020_2024/acs_acs5/B25024.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 577K]  ./data/raw/census/acs/2020_2024/acs_acs5/B25034.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 648K]  ./data/raw/census/acs/2020_2024/acs_acs5/B25044.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 623K]  ./data/raw/census/acs/2020_2024/acs_acs5/B28002.csv
+│   │   │   │       │   └── [-rw-rw-r-- map10194 634K]  ./data/raw/census/acs/2020_2024/acs_acs5/C16002.csv
+│   │   │   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2020_2024/acs_acs5_profile
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/acs/2020_2024/acs_acs5_profile/DP02.csv
+│   │   │   │       │   ├── [-rw-rw-r-- map10194 8.9M]  ./data/raw/census/acs/2020_2024/acs_acs5_profile/DP03.csv
+│   │   │   │       │   └── [-rw-rw-r-- map10194 7.9M]  ./data/raw/census/acs/2020_2024/acs_acs5_profile/DP04.csv
+│   │   │   │       └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/acs/2020_2024/acs_acs5_subject
+│   │   │   │           ├── [-rw-rw-r-- map10194  13M]  ./data/raw/census/acs/2020_2024/acs_acs5_subject/S1501.csv
+│   │   │   │           ├── [-rw-rw-r-- map10194 5.5M]  ./data/raw/census/acs/2020_2024/acs_acs5_subject/S1701.csv
+│   │   │   │           └── [-rw-rw-r-- map10194 5.2M]  ./data/raw/census/acs/2020_2024/acs_acs5_subject/S1810.csv
+│   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/census/tiger
+│   │   │       ├── [-rw-rw-r-- map10194 6.6M]  ./data/raw/census/tiger/tl_2011_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 6.8M]  ./data/raw/census/tiger/tl_2012_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.1M]  ./data/raw/census/tiger/tl_2013_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/tiger/tl_2014_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/tiger/tl_2015_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/tiger/tl_2016_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.2M]  ./data/raw/census/tiger/tl_2017_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.3M]  ./data/raw/census/tiger/tl_2018_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 7.3M]  ./data/raw/census/tiger/tl_2019_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 8.2M]  ./data/raw/census/tiger/tl_2020_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 8.4M]  ./data/raw/census/tiger/tl_2021_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 8.4M]  ./data/raw/census/tiger/tl_2022_36_tract.zip
+│   │   │       ├── [-rw-rw-r-- map10194 8.4M]  ./data/raw/census/tiger/tl_2023_36_tract.zip
+│   │   │       └── [-rw-rw-r-- map10194 8.4M]  ./data/raw/census/tiger/tl_2024_36_tract.zip
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./data/raw/infrastructure
+│   │       ├── [-rw-rw-r-- map10194  22M]  ./data/raw/infrastructure/catch_basins.csv
+│   │       ├── [-rw-rw-r-- map10194 5.5M]  ./data/raw/infrastructure/green_infrastructure.csv
+│   │       └── [-rw-rw-r-- map10194 1018K]  ./data/raw/infrastructure/outfalls.csv
+│   ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial
+│   │   ├── [-rw-rw-r-- map10194   14]  ./data/spatial/.gitignore
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/raster
+│   │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/spatial/raster/nyc_dem
+│   │   │       └── [-rw-rw-r-- map10194  11G]  ./data/spatial/raster/nyc_dem/nyc_dem_1m.tif
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/census
+│   │       │   ├── [-rw-rw-r-- map10194  617]  ./data/spatial/vector/census/acs_2024_borough_summary.csv
+│   │       │   ├── [-rw-rw-r-- map10194 782K]  ./data/spatial/vector/census/acs_2024_nyc_tracts.csv
+│   │       │   ├── [-rw-rw-r-- map10194 6.6M]  ./data/spatial/vector/census/acs_2024_nyc_tracts.geojson
+│   │       │   ├── [-rw-r--r-- map10194 2.4M]  ./data/spatial/vector/census/acs_2024_nyc_tracts.gpkg
+│   │       │   └── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/census/raw
+│   │       │       ├── [-rw-rw-r-- map10194 303K]  ./data/spatial/vector/census/raw/acs_2024_nyc_tracts_raw.csv
+│   │       │       └── [-rw-rw-r-- map10194 8.4M]  ./data/spatial/vector/census/raw/tl_2024_36_tract.zip
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/fema_nfhl
+│   │       │   ├── [-rw-rw-r-- map10194  36M]  ./data/spatial/vector/fema_nfhl/nyc_nfhl_flood_zones.geojson
+│   │       │   └── [-rw-rw-r-- map10194 255M]  ./data/spatial/vector/fema_nfhl/nyc_nfhl_flood_zones_raw.geojson
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/noaa
+│   │       │   ├── [-rw-rw-r-- map10194 3.9K]  ./data/spatial/vector/noaa/precipitation_city_stations.geojson
+│   │       │   ├── [-rw-rw-r-- map10194  30K]  ./data/spatial/vector/noaa/precipitation_seed_stations.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 3.1M]  ./data/spatial/vector/noaa/precipitation_segment_station_crosswalk.csv
+│   │       │   ├── [-rw-rw-r-- map10194 3.9K]  ./data/spatial/vector/noaa/precipitation_selected_stations.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 1.1K]  ./data/spatial/vector/noaa/precipitation_station_points.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 3.5M]  ./data/spatial/vector/noaa/precipitation_thiessen.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 3.2K]  ./data/spatial/vector/noaa/tide_station_points.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 3.5M]  ./data/spatial/vector/noaa/tide_thiessen.geojson
+│   │       │   ├── [-rw-r--r-- map10194 197K]  ./data/spatial/vector/noaa/tide_thiessen_primary.geojson
+│   │       │   └── [-rw-rw-r-- map10194 2.4M]  ./data/spatial/vector/noaa/tide_thiessen_primary_street_crosswalk.csv
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/nyc_borough_boundary
+│   │       │   ├── [-rw-rw-r-- map10194 4.0M]  ./data/spatial/vector/nyc_borough_boundary/nybb.geojson
+│   │       │   └── [-rw-rw-r-- map10194 139K]  ./data/spatial/vector/nyc_borough_boundary/nybb_metadata.pdf
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/nyc_shoreline
+│   │       │   ├── [-rw-r--r-- map10194 6.0K]  ./data/spatial/vector/nyc_shoreline/.DS_Store
+│   │       │   ├── [-rw-rw-r-- map10194  16M]  ./data/spatial/vector/nyc_shoreline/NYC_Planimetric_Database__Shoreline_20260507.geojson
+│   │       │   ├── [-rw-rw-r-- map10194  16M]  ./data/spatial/vector/nyc_shoreline/nyc_shoreline_tide.geojson
+│   │       │   ├── [-rw-rw-r-- map10194  16M]  ./data/spatial/vector/nyc_shoreline/nyc_shoreline_tide_primary.geojson
+│   │       │   ├── [-rw-rw-r-- map10194 2.2K]  ./data/spatial/vector/nyc_shoreline/nyc_shoreline_tide_primary.qmd
+│   │       │   ├── [-rw-rw-r-- map10194  680]  ./data/spatial/vector/nyc_shoreline/nyc_shoreline_tide.qmd
+│   │       │   └── [-rw-rw-r-- map10194   85]  ./data/spatial/vector/nyc_shoreline/source.txt
+│   │       └── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/streets
+│   │           ├── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/streets/processed
+│   │           │   ├── [-rw-rw-r-- map10194  53K]  ./data/spatial/vector/streets/processed/lion_connectivity_components.csv
+│   │           │   ├── [-rw-rw-r-- map10194 615M]  ./data/spatial/vector/streets/processed/lion_connectivity.geojson
+│   │           │   ├── [-rw-r--r-- map10194 156M]  ./data/spatial/vector/streets/processed/lion_connectivity.gpkg
+│   │           │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/spatial/vector/streets/processed/lion_connectivity_nodes.csv
+│   │           │   ├── [-rw-rw-r-- map10194  311]  ./data/spatial/vector/streets/processed/lion_connectivity_summary.csv
+│   │           │   ├── [-rw-rw-r-- map10194 3.3M]  ./data/spatial/vector/streets/processed/lion_edge_metrics.csv
+│   │           │   ├── [-rw-r--r-- map10194 167M]  ./data/spatial/vector/streets/processed/lion_metrics_elevation.gpkg
+│   │           │   ├── [-rw-r--r-- map10194 150M]  ./data/spatial/vector/streets/processed/lion_metrics.gpkg
+│   │           │   ├── [-rw-r--r-- map10194 161M]  ./data/spatial/vector/streets/processed/lion_metrics_shore.gpkg
+│   │           │   └── [-rw-rw-r-- map10194 2.9M]  ./data/spatial/vector/streets/processed/lion_node_metrics.csv
+│   │           └── [drwxrwxr-x map10194 4.0K]  ./data/spatial/vector/streets/raw
+│   │               └── [lrwxrwxrwx map10194   69]  ./data/spatial/vector/streets/raw/lion.gdb -> /home/map10194/Documents/ml4c/ml4c-pro/data/raw/nyclion/lion/lion.gdb
+│   └── [drwxrwxr-x map10194 4.0K]  ./data/temporal
+│       ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/311
+│       │   ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/311/311_2010_2019
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2010_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.7M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2011_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2012_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 4.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2013_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.7M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.7M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.7M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 5.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2014_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.7M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.1M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2015_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.0M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.5M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.8M]  ./data/temporal/311/311_2010_2019/76ig-c548_2016_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.6M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.4M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.3M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.9M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_08.parquet
+│       │   │   └── [-rw-rw-r-- map10194 8.2M]  ./data/temporal/311/311_2010_2019/76ig-c548_2017_09.parquet
+│       │   ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/311/311_2020_present
+│       │   │   ├── [-rw-rw-r-- map10194 8.5M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.6M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 7.8M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 6.8M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  14M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 9.9M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 9.7M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2020_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 9.6M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2021_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2022_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 9.3M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2023_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194 10.0M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  11M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2024_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  10M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_04.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_05.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_06.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_07.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_08.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_09.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  14M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_10.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_11.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2025_12.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  14M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2026_01.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2026_02.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  13M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2026_03.parquet
+│       │   │   ├── [-rw-rw-r-- map10194  12M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2026_04.parquet
+│       │   │   └── [-rw-rw-r-- map10194 2.4M]  ./data/temporal/311/311_2020_present/erm2-nwe9_2026_05.parquet
+│       │   └── [-rw-rw-r-- map10194 4.8M]  ./data/temporal/311/311_monthly_borough_complaint_summary.csv
+│       ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/fema_nfhl
+│       │   └── [-rw-rw-r-- map10194  295]  ./data/temporal/fema_nfhl/nyc_nfhl_flood_zone_summary.csv
+│       ├── [-rw-rw-r-- map10194   14]  ./data/temporal/.gitignore
+│       ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/noaa
+│       │   ├── [-rw-rw-r-- map10194 8.2M]  ./data/temporal/noaa/4308211.csv
+│       │   ├── [drwxrwxr-x map10194 4.0K]  ./data/temporal/noaa/cache
+│       │   │   ├── [-rw-rw-r-- map10194 1.8K]  ./data/temporal/noaa/cache/precip_probe_GHCND_PRCP_0bf82b00bc69cef3.csv
+│       │   │   ├── [-rw-rw-r-- map10194 1.8K]  ./data/temporal/noaa/cache/precip_probe_GHCND_PRCP_20f3b34256422887.csv
+│       │   │   ├── [-rw-rw-r-- map10194 1.8K]  ./data/temporal/noaa/cache/precip_probe_GHCND_PRCP_6c76e75f62d04da5.csv
+│       │   │   ├── [-rw-rw-r-- map10194 1.8K]  ./data/temporal/noaa/cache/precip_probe_GHCND_PRCP_86bc7a50d0b01500.csv
+│       │   │   └── [drwxrwxr-x map10194 4.0K]  ./data/temporal/noaa/cache/tides
+│       │   │       ├── [-rw-rw-r-- map10194 1.6M]  ./data/temporal/noaa/cache/tides/8516945.parquet
+│       │   │       ├── [-rw-rw-r-- map10194 1.6M]  ./data/temporal/noaa/cache/tides/8518750.parquet
+│       │   │       └── [-rw-rw-r-- map10194 1.6M]  ./data/temporal/noaa/cache/tides/8531680.parquet
+│       │   ├── [-rw-rw-r-- map10194  38M]  ./data/temporal/noaa/precipitation.csv
+│       │   ├── [-rw-rw-r-- map10194 4.4M]  ./data/temporal/noaa/tide_series.parquet
+│       │   └── [-rw-rw-r-- map10194  687]  ./data/temporal/noaa/tide_summary.csv
+│       └── [-rw-rw-r-- map10194  940]  ./data/temporal/NYC_Governments_2010_2026.csv
+├── [drwxrwxr-x map10194 4.0K]  ./docs
+│   └── [-rw-rw-r-- map10194    0]  ./docs/index.md
+├── [-rw-rw-r-- map10194  390]  ./.env
+├── [-rw-rw-r-- map10194  450]  ./environment.yml
+├── [drwxrwxr-x map10194 4.0K]  ./.git
+│   ├── [drwxrwxr-x map10194 4.0K]  ./.git/branches
+│   ├── [-rw-rw-r-- map10194   19]  ./.git/COMMIT_EDITMSG
+│   ├── [-rw-rw-r-- map10194  302]  ./.git/config
+│   ├── [-rw-rw-r-- map10194   73]  ./.git/description
+│   ├── [-rw-rw-r-- map10194  100]  ./.git/FETCH_HEAD
+│   ├── [-rw-rw-r-- map10194   21]  ./.git/HEAD
+│   ├── [drwxrwxr-x map10194 4.0K]  ./.git/hooks
+│   │   ├── [-rwxrwxr-x map10194  478]  ./.git/hooks/applypatch-msg.sample
+│   │   ├── [-rwxrwxr-x map10194  896]  ./.git/hooks/commit-msg.sample
+│   │   ├── [-rwxrwxr-x map10194 4.6K]  ./.git/hooks/fsmonitor-watchman.sample
+│   │   ├── [-rwxrwxr-x map10194  189]  ./.git/hooks/post-update.sample
+│   │   ├── [-rwxrwxr-x map10194  424]  ./.git/hooks/pre-applypatch.sample
+│   │   ├── [-rwxrwxr-x map10194 1.6K]  ./.git/hooks/pre-commit.sample
+│   │   ├── [-rwxrwxr-x map10194  416]  ./.git/hooks/pre-merge-commit.sample
+│   │   ├── [-rwxrwxr-x map10194 1.5K]  ./.git/hooks/prepare-commit-msg.sample
+│   │   ├── [-rwxrwxr-x map10194 1.3K]  ./.git/hooks/pre-push.sample
+│   │   ├── [-rwxrwxr-x map10194 4.8K]  ./.git/hooks/pre-rebase.sample
+│   │   ├── [-rwxrwxr-x map10194  544]  ./.git/hooks/pre-receive.sample
+│   │   ├── [-rwxrwxr-x map10194 2.7K]  ./.git/hooks/push-to-checkout.sample
+│   │   ├── [-rwxrwxr-x map10194 2.3K]  ./.git/hooks/sendemail-validate.sample
+│   │   └── [-rwxrwxr-x map10194 3.6K]  ./.git/hooks/update.sample
+│   ├── [-rw-rw-r-- map10194  11K]  ./.git/index
+│   ├── [drwxrwxr-x map10194 4.0K]  ./.git/info
+│   │   └── [-rw-rw-r-- map10194  240]  ./.git/info/exclude
+│   ├── [drwxrwxr-x map10194 4.0K]  ./.git/logs
+│   │   ├── [-rw-rw-r-- map10194 1.8K]  ./.git/logs/HEAD
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./.git/logs/refs
+│   │       ├── [drwxrwxr-x map10194 4.0K]  ./.git/logs/refs/heads
+│   │       │   └── [-rw-rw-r-- map10194 1.8K]  ./.git/logs/refs/heads/main
+│   │       └── [drwxrwxr-x map10194 4.0K]  ./.git/logs/refs/remotes
+│   │           └── [drwxrwxr-x map10194 4.0K]  ./.git/logs/refs/remotes/origin
+│   │               ├── [-rw-rw-r-- map10194  194]  ./.git/logs/refs/remotes/origin/HEAD
+│   │               └── [-rw-rw-r-- map10194 1.5K]  ./.git/logs/refs/remotes/origin/main
+│   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/01
+│   │   │   └── [-r--r--r-- map10194  255]  ./.git/objects/01/92cd555133015410e77c436e29b03336615ae9
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/02
+│   │   │   ├── [-r--r--r-- map10194 119K]  ./.git/objects/02/3dd77eaf4d59fd74a7ae393bfe43544d7deb59
+│   │   │   └── [-r--r--r-- map10194  542]  ./.git/objects/02/ff309f2786154dd78285cbae52e491d07918b4
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/03
+│   │   │   └── [-r--r--r-- map10194 1005]  ./.git/objects/03/7dcd92081dc94891b8b388da0e6f5bba202e2d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/04
+│   │   │   ├── [-r--r--r-- map10194  28K]  ./.git/objects/04/510264ec1df1ed6ec57c9aa1428c442a9d65b2
+│   │   │   └── [-r--r--r-- map10194  549]  ./.git/objects/04/841650c4115898747c4f27ff9c54cd8ea0aed5
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/05
+│   │   │   └── [-r--r--r-- map10194 4.2K]  ./.git/objects/05/af375dd517ffd211058b2de171778ef59f3ca7
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/06
+│   │   │   ├── [-r--r--r-- map10194  317]  ./.git/objects/06/3ec6ac06c32b942f96247f204d0a3f8c3c5ef7
+│   │   │   └── [-r--r--r-- map10194  28K]  ./.git/objects/06/4ee200b0fd9011996a7b9d60f59cf4a723d35b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/08
+│   │   │   ├── [-r--r--r-- map10194  922]  ./.git/objects/08/1a79f99f541ead4ea223dc568a417b96467655
+│   │   │   └── [-r--r--r-- map10194  875]  ./.git/objects/08/5c81501d555c65e2bb968dc2f3f8174ba586d1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/09
+│   │   │   └── [-r--r--r-- map10194 6.1K]  ./.git/objects/09/dc16655b3a291b7db4660b59cfe04b1b60e957
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/0a
+│   │   │   └── [-r--r--r-- map10194 206K]  ./.git/objects/0a/112b6813ef98104ec5b194951b374496263821
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/0b
+│   │   │   └── [-r--r--r-- map10194  120]  ./.git/objects/0b/dddb0024055d7826d66f148b8c6d68eccefff2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/0c
+│   │   │   ├── [-r--r--r-- map10194 3.2K]  ./.git/objects/0c/1a87946c483b9051024d15eb17d6fd2e1d44bb
+│   │   │   ├── [-r--r--r-- map10194  808]  ./.git/objects/0c/3b4bc803525eb4cc971e665f066f46f8bbd072
+│   │   │   ├── [-r--r--r-- map10194 1.0K]  ./.git/objects/0c/8345edefeb31cde2d256832bd26223e76f517f
+│   │   │   ├── [-r--r--r-- map10194 5.8K]  ./.git/objects/0c/b933bcb290194c9dc94aaa511ca8d96278b7ff
+│   │   │   └── [-r--r--r-- map10194  10K]  ./.git/objects/0c/fe7350a3686d3db89774b2dd840ea8e0262eb2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/0d
+│   │   │   └── [-r--r--r-- map10194  918]  ./.git/objects/0d/1eb34bd34993a28be50cdd09cb09ec535466c0
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/0f
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/0f/03b88ed5b1317c66978c54c826f9fa621a7ab6
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/14
+│   │   │   └── [-r--r--r-- map10194  201]  ./.git/objects/14/4a265d1d71f7e37f6db3ba2e47631df270213c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/15
+│   │   │   ├── [-r--r--r-- map10194  243]  ./.git/objects/15/2840722a3c4272bc7d2f9e945b129d71d62a10
+│   │   │   └── [-r--r--r-- map10194 129K]  ./.git/objects/15/c1f45c1dc36c7d6d61ee509bed9cdcebb5ff12
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/16
+│   │   │   ├── [-r--r--r-- map10194  13K]  ./.git/objects/16/174abf2ce2c66485db0fcb3e7488c51289f8cb
+│   │   │   └── [-r--r--r-- map10194  644]  ./.git/objects/16/24ea1814eabc8b2d2db2298433523062ab2d53
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/18
+│   │   │   └── [-r--r--r-- map10194  376]  ./.git/objects/18/6b734efe81e521bd290d437eabfef0acce5dad
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/1a
+│   │   │   ├── [-r--r--r-- map10194 5.7K]  ./.git/objects/1a/59797aca62c8d5bb368367c59741810258fd9b
+│   │   │   ├── [-r--r--r-- map10194 652K]  ./.git/objects/1a/8d97e3913bac61d3d71735bffe661214fb9a02
+│   │   │   └── [-r--r--r-- map10194 8.4M]  ./.git/objects/1a/c365ac8fcd760fd20972c73bbd12881e53648b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/1b
+│   │   │   └── [-r--r--r-- map10194 1.9K]  ./.git/objects/1b/bcfa55e26d62cb701983509dcc094e0e5bab00
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/1c
+│   │   │   └── [-r--r--r-- map10194  17K]  ./.git/objects/1c/d226062b7759c68d2c39a990de94a68671ef37
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/1e
+│   │   │   └── [-r--r--r-- map10194  558]  ./.git/objects/1e/9861228ed3b4ddf3091c904679b2ad578e02bb
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/1f
+│   │   │   └── [-r--r--r-- map10194  13K]  ./.git/objects/1f/88ccdb124e695dfa2e17c71c4fa23dd791d70c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/20
+│   │   │   ├── [-r--r--r-- map10194 8.4M]  ./.git/objects/20/3ea08006859eee9dbb60e79d5d03ba6759d9fb
+│   │   │   ├── [-r--r--r-- map10194  280]  ./.git/objects/20/538861e6c57e459146985443c16b675a7ff1ee
+│   │   │   └── [-r--r--r-- map10194  173]  ./.git/objects/20/57b69acb65a0118d3b7f4dc0610853484c5431
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/21
+│   │   │   └── [-r--r--r-- map10194  700]  ./.git/objects/21/045ca6ab76728e29761ee1233efde93ecd341d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/22
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/22/1c2ffdbfcb3809069c0b8265ceb659da65573a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/24
+│   │   │   ├── [-r--r--r-- map10194  210]  ./.git/objects/24/7c7ca12e26e819643c3a2dedf18086223e64c1
+│   │   │   └── [-r--r--r-- map10194 9.0K]  ./.git/objects/24/b8ec366350394e075e0e5f0a2acc152e6ec04a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/27
+│   │   │   └── [-r--r--r-- map10194  167]  ./.git/objects/27/ce3a0cfd607e2f62b451de097e2dc0c7bd4415
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/28
+│   │   │   ├── [-r--r--r-- map10194   60]  ./.git/objects/28/2e6bffa8230f0f8a944984fd3163b1221cce24
+│   │   │   └── [-r--r--r-- map10194 3.0K]  ./.git/objects/28/857240c2d247ceb67e58ee2c697cf1e70bffa5
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/29
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/29/99cdedd8d59ad22e806b61fdbe41ae6ee7c4df
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/2b
+│   │   │   └── [-r--r--r-- map10194  125]  ./.git/objects/2b/8b4a5088389d0066a039e9f3f55d3e3ea2acc4
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/2e
+│   │   │   ├── [-r--r--r-- map10194   63]  ./.git/objects/2e/3afbdfd812c875349d2e646409e7fe45a65cca
+│   │   │   └── [-r--r--r-- map10194  17K]  ./.git/objects/2e/53b4c9b767ab5826801e08c79bb5bb17f721bd
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/2f
+│   │   │   └── [-r--r--r-- map10194  798]  ./.git/objects/2f/4d53c8556a2ba3e466f1c4d316d4de2f270448
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/30
+│   │   │   ├── [-r--r--r-- map10194  57K]  ./.git/objects/30/1de452a372a4e3a515b0c6851aec34c6e042b5
+│   │   │   └── [-r--r--r-- map10194 662K]  ./.git/objects/30/d2901f3e89b161bab55ce335c06bc72c6dcf21
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/31
+│   │   │   ├── [-r--r--r-- map10194  541]  ./.git/objects/31/1d576c33517442a6d4a2f024ebbea6d6f336c9
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/31/def5ab7eb90b27b6447ab8359968581af608df
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/33
+│   │   │   ├── [-r--r--r-- map10194  471]  ./.git/objects/33/638b1ecaa5f5fe3236c32b0515561fccab8107
+│   │   │   ├── [-r--r--r-- map10194 7.4K]  ./.git/objects/33/c3a1a4ad77218b19afe0710dbdd4f879570f35
+│   │   │   └── [-r--r--r-- map10194   54]  ./.git/objects/33/f82468d755f4f451fd92d2ba0e8b98bec90eda
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/34
+│   │   │   ├── [-r--r--r-- map10194  636]  ./.git/objects/34/80f01dafa2476ce2927ae9983c2c671c2adb14
+│   │   │   └── [-r--r--r-- map10194  157]  ./.git/objects/34/895853b3a6b075fd5265259733b52884fbbc63
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/35
+│   │   │   ├── [-r--r--r-- map10194  210]  ./.git/objects/35/9fdb4a3980a0b14168fabeca5cc65c85d96b4d
+│   │   │   └── [-r--r--r-- map10194  17K]  ./.git/objects/35/fd24c9e88b9e5d1c0e5ee28825315a08147373
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/3a
+│   │   │   └── [-r--r--r-- map10194 2.2K]  ./.git/objects/3a/e109f2fd1cc776f55f80ae4131d18814cec814
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/3b
+│   │   │   ├── [-r--r--r-- map10194   94]  ./.git/objects/3b/52be4b5ae6f4250dd52121e1b90be534fe779c
+│   │   │   ├── [-r--r--r-- map10194   54]  ./.git/objects/3b/9dd33a931fce9a5e8595ddc7b8a446958f3652
+│   │   │   └── [-r--r--r-- map10194  157]  ./.git/objects/3b/ca784bb492ceed804260ac6eb61b3aa82b1f2d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/3d
+│   │   │   ├── [-r--r--r-- map10194 4.2K]  ./.git/objects/3d/28ad3affc9e294ed82439c1f595d47a624fa7f
+│   │   │   └── [-r--r--r-- map10194  542]  ./.git/objects/3d/36347716229f8a6af5454de6186c1d8b0042eb
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/3e
+│   │   │   └── [-r--r--r-- map10194  404]  ./.git/objects/3e/4a2e321c7f2c0a9dcb5dcb94cf78f30648ae25
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/3f
+│   │   │   └── [-r--r--r-- map10194 156K]  ./.git/objects/3f/c91460c8e2af2d50afbd0f48949576672cecc9
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/41
+│   │   │   ├── [-r--r--r-- map10194  690]  ./.git/objects/41/3a28a410092361f4cb84f87860bc9a1bd00a42
+│   │   │   └── [-r--r--r-- map10194 4.3K]  ./.git/objects/41/9eb1f1dd0b6126c445dd2714099c939483dba2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/43
+│   │   │   ├── [-r--r--r-- map10194  541]  ./.git/objects/43/254bedad559e74556e9c9069c3f346fad74028
+│   │   │   └── [-r--r--r-- map10194  157]  ./.git/objects/43/a0668103f7bf9900bda9a0b1b8393c75e36178
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/44
+│   │   │   └── [-r--r--r-- map10194  156]  ./.git/objects/44/cd4819648b3b7f69a2ddff4e03fdc3f7c4d15d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/45
+│   │   │   ├── [-r--r--r-- map10194  10K]  ./.git/objects/45/5c98db723f12ffef48b766785af91d31b0216c
+│   │   │   └── [-r--r--r-- map10194  266]  ./.git/objects/45/6ac625cca9300c723358294a06126bec0b69b5
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/46
+│   │   │   ├── [-r--r--r-- map10194  723]  ./.git/objects/46/4850e97563c3a684b2c7ff4da8cbc32ce3043a
+│   │   │   ├── [-r--r--r-- map10194 166K]  ./.git/objects/46/714d8ebb4ec3651014067a68b49ec6baf382c9
+│   │   │   └── [-r--r--r-- map10194 1.2K]  ./.git/objects/46/ee569f33e066e6a20b084008cac14e577b40c8
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/47
+│   │   │   └── [-r--r--r-- map10194 4.0K]  ./.git/objects/47/e55c356fbcb3c34b8562d8233597c355c181f2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/49
+│   │   │   ├── [-r--r--r-- map10194  174]  ./.git/objects/49/a0fa1d9365fd7125db5ac1ea670ce52d8c3924
+│   │   │   └── [-r--r--r-- map10194 158K]  ./.git/objects/49/f2fcb425eff6ccc795bdc577a324036b0b4a9a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/4b
+│   │   │   ├── [-r--r--r-- map10194  18M]  ./.git/objects/4b/0861013e5cd189098db0ebc4da0ef9aaf1238a
+│   │   │   ├── [-r--r--r-- map10194  15K]  ./.git/objects/4b/c3531c65a9a18dcac9145e2f0a71690585888c
+│   │   │   └── [-r--r--r-- map10194   54]  ./.git/objects/4b/caafb9a0db441134f140a591e128cf3f63f645
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/4c
+│   │   │   ├── [-r--r--r-- map10194 149K]  ./.git/objects/4c/0014b8b623ef3588ab852c24538b1c39d4e734
+│   │   │   ├── [-r--r--r-- map10194  542]  ./.git/objects/4c/d7f6a4cdf89108ccbb9c82b63bbd0fdadcff7f
+│   │   │   └── [-r--r--r-- map10194 8.8M]  ./.git/objects/4c/e40d59c318750880aa2bb06d1a1ea8cd194d9d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/4d
+│   │   │   └── [-r--r--r-- map10194  202]  ./.git/objects/4d/5178b58e8234baff278a79e51663fcb4fe9678
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/4f
+│   │   │   ├── [-r--r--r-- map10194  127]  ./.git/objects/4f/2d366fefad41dc542a3dfb5794c846a65f43ca
+│   │   │   └── [-r--r--r-- map10194 7.1M]  ./.git/objects/4f/5401585f836a61dc498f85ff94d623b0929213
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/50
+│   │   │   ├── [-r--r--r-- map10194 2.8K]  ./.git/objects/50/50a70ff110a2fba1e9e69b2dc2f7b40ae0595a
+│   │   │   └── [-r--r--r-- map10194 1.4K]  ./.git/objects/50/56e665208327680084f24ba6d14ca9013fcaa1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/51
+│   │   │   └── [-r--r--r-- map10194  895]  ./.git/objects/51/80461da67fc55ccc1b19a1fc6e56bb5d633b63
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/52
+│   │   │   └── [-r--r--r-- map10194 7.6K]  ./.git/objects/52/769c656c45ba78d814a5a3ca94f0d24da8bce6
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/54
+│   │   │   └── [-r--r--r-- map10194   54]  ./.git/objects/54/bd2edff2290a40be87654dbe6173de4be63605
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/55
+│   │   │   ├── [-r--r--r-- map10194  53K]  ./.git/objects/55/7a319120036e867f4d9e0c0bf251432c172453
+│   │   │   └── [-r--r--r-- map10194 5.5M]  ./.git/objects/55/aeca23a4f282162f2e9dfbb4ab9478a0484a7b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/56
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/56/9e5121be9d8ac2b5b34183e4abc34689ad3add
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/57
+│   │   │   ├── [-r--r--r-- map10194 2.9K]  ./.git/objects/57/6bbf540d9a4c8066a416ca27a43eafbddb2e62
+│   │   │   └── [-r--r--r-- map10194 645K]  ./.git/objects/57/ed3870b9dd482a669432978862ac2404ed5656
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/58
+│   │   │   ├── [-r--r--r-- map10194  312]  ./.git/objects/58/15ef97b0a37b930424f3efb30a84f0ebc81e2e
+│   │   │   └── [-r--r--r-- map10194 7.3K]  ./.git/objects/58/223c36d46730d56a35262d4a39554bf966213b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/5a
+│   │   │   └── [-r--r--r-- map10194  243]  ./.git/objects/5a/55a23ddeccd005b3a5d2af4017e6353546f8c6
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/5b
+│   │   │   └── [-r--r--r-- map10194  14K]  ./.git/objects/5b/7577db291dfbf3e736b4300940cebd25c4a3c3
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/5c
+│   │   │   ├── [-r--r--r-- map10194  303]  ./.git/objects/5c/d4bf87985c4caa50d3b0d001acec259141d4cc
+│   │   │   └── [-r--r--r-- map10194  185]  ./.git/objects/5c/f5562b38c3040c23ae5783c40edbc6797e5a8f
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/5f
+│   │   │   └── [-r--r--r-- map10194 5.0K]  ./.git/objects/5f/f6743efd05cdee9fa4e6014e3e069262260585
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/60
+│   │   │   └── [-r--r--r-- map10194 5.7K]  ./.git/objects/60/2ee636ae1301d620ec8309562f647fd1e8daeb
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/61
+│   │   │   ├── [-r--r--r-- map10194 8.8M]  ./.git/objects/61/39244be0763c0cdf68281caed620115154c1ab
+│   │   │   └── [-r--r--r-- map10194 9.5K]  ./.git/objects/61/89a3128febba3cb6649c8e94c1226b3ecd3303
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/62
+│   │   │   ├── [-r--r--r-- map10194 8.4M]  ./.git/objects/62/1922fbe3c0793e69789bd40b42ddde2ba94eac
+│   │   │   ├── [-r--r--r-- map10194  78K]  ./.git/objects/62/cfc14ea1a9a1a472c6a07f13e959f856e7fc69
+│   │   │   └── [-r--r--r-- map10194 679K]  ./.git/objects/62/d35723445a434f777dbd3a3c7bd6b6107c0d0c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/63
+│   │   │   └── [-r--r--r-- map10194 2.7K]  ./.git/objects/63/51fbb681f8aa8640ef9fca17e8d46e53981a8c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/65
+│   │   │   └── [-r--r--r-- map10194 1.2M]  ./.git/objects/65/71105953d2bcbc204f72bb9c4286a0d07bb91c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/66
+│   │   │   └── [-r--r--r-- map10194  16M]  ./.git/objects/66/ad8c775843e8a66541f0678b7cf29f78b5eb18
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/67
+│   │   │   └── [-r--r--r-- map10194 2.9K]  ./.git/objects/67/2a043cae82ff2e6fdac72279dec1dc7bb58236
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/68
+│   │   │   └── [-r--r--r-- map10194  36K]  ./.git/objects/68/722d689ec8ac196140dae0dfb66919778418fb
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/6a
+│   │   │   └── [-r--r--r-- map10194  180]  ./.git/objects/6a/2f5c75a7a68304518be35049553f76645d0266
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/6b
+│   │   │   └── [-r--r--r-- map10194 116K]  ./.git/objects/6b/4fe8cdb05f405fbf0b1f4d6779769fd2c6ccfa
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/6c
+│   │   │   ├── [-r--r--r-- map10194 5.7K]  ./.git/objects/6c/45bbf286fbfee43a66eccabad79bfcfc9e833a
+│   │   │   ├── [-r--r--r-- map10194  755]  ./.git/objects/6c/e0263fcc5c8c1509cb5a7cca02f2c86d776df4
+│   │   │   └── [-r--r--r-- map10194 5.0K]  ./.git/objects/6c/fdb8b1178a8969c65fc20f4823cc3f6a34a40e
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/6e
+│   │   │   └── [-r--r--r-- map10194  637]  ./.git/objects/6e/fe5644113583356a6aeb0632367279b3633fda
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/6f
+│   │   │   └── [-r--r--r-- map10194 3.0K]  ./.git/objects/6f/b8dbdb35d25513c3d117aabbe0e277e0665d66
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/73
+│   │   │   └── [-r--r--r-- map10194  647]  ./.git/objects/73/1bda795eb3cddf85a63e7db96a06f4cf4b889e
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/74
+│   │   │   ├── [-r--r--r-- map10194  493]  ./.git/objects/74/986907890d8b83727af7d422ec93b53bb5f558
+│   │   │   └── [-r--r--r-- map10194  205]  ./.git/objects/74/eb1a7bdbb790deccbabe167570109d8ec736c7
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/76
+│   │   │   ├── [-r--r--r-- map10194  13K]  ./.git/objects/76/82f0be4dd16adbe0439b0a1a41eea56002e7ad
+│   │   │   └── [-r--r--r-- map10194  836]  ./.git/objects/76/c5045069278b5e4aae99c26d793350f967fd99
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/78
+│   │   │   ├── [-r--r--r-- map10194 1.3K]  ./.git/objects/78/94b0d367fd9034a7456f48b4c9629d58d23e2b
+│   │   │   └── [-r--r--r-- map10194  764]  ./.git/objects/78/dfc7f254ee9573c8749308f8e4d7ad62a8b04d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/79
+│   │   │   └── [-r--r--r-- map10194  37K]  ./.git/objects/79/4509b6398f34320709883accae7b4d2b8757c7
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/7e
+│   │   │   ├── [-r--r--r-- map10194 5.0K]  ./.git/objects/7e/38b3217133835992c4146bfc10421121747c72
+│   │   │   └── [-r--r--r-- map10194  403]  ./.git/objects/7e/700b2358c6c010b9283cf5cf516ed8b8df4a2f
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/7f
+│   │   │   └── [-r--r--r-- map10194   55]  ./.git/objects/7f/f0e4aa8ea5da047fe2b711926ea093dc7516bf
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/80
+│   │   │   └── [-r--r--r-- map10194 1.5K]  ./.git/objects/80/cf09a40964725c78e0bdc7dba7fd74feafdbd0
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/82
+│   │   │   └── [-r--r--r-- map10194 8.8M]  ./.git/objects/82/a5878e5b0f8364a88cfcc4aa212c8eff947717
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/84
+│   │   │   ├── [-r--r--r-- map10194  531]  ./.git/objects/84/41e8833f2031c683d96657a4a5c1ac5467b4dd
+│   │   │   └── [-r--r--r-- map10194   64]  ./.git/objects/84/670249dc319759d2d8d95297dd1451ac590ec0
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/85
+│   │   │   └── [-r--r--r-- map10194 5.4K]  ./.git/objects/85/6aa3820c7dbecb8df093e3413fd56884b53c53
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/86
+│   │   │   ├── [-r--r--r-- map10194 7.9M]  ./.git/objects/86/b151d7fe085cae3f15c53df8152b9ad6a0ba69
+│   │   │   └── [-r--r--r-- map10194 8.4M]  ./.git/objects/86/bf8047b38e0f04aba10bb033fd503699e91425
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/89
+│   │   │   ├── [-r--r--r-- map10194 6.8M]  ./.git/objects/89/5e6052b819dea54e0b24305b3ea81a29409792
+│   │   │   ├── [-r--r--r-- map10194  831]  ./.git/objects/89/74124c52e002402a2abafcc52fdff19dade73c
+│   │   │   ├── [-r--r--r-- map10194  56K]  ./.git/objects/89/ab69f12d7eca69008be5734cacc827e2b14b31
+│   │   │   └── [-r--r--r-- map10194 6.9M]  ./.git/objects/89/df52d4d88599536daa5331206b2707611986ff
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/8b
+│   │   │   └── [-r--r--r-- map10194 8.8K]  ./.git/objects/8b/9a705a2d3efd63412ea5a4a74a3cdc73a2ede1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/90
+│   │   │   └── [-r--r--r-- map10194  100]  ./.git/objects/90/c630bbd2f5ede0f98b1a0ca0dd12621845e0a7
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/91
+│   │   │   └── [-r--r--r-- map10194  724]  ./.git/objects/91/faed6f8123a1d0839778de23fdb99221163784
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/94
+│   │   │   ├── [-r--r--r-- map10194 2.5K]  ./.git/objects/94/40298b201004864928f36e61ae324dc7087981
+│   │   │   ├── [-r--r--r-- map10194   54]  ./.git/objects/94/6963d99d6f985ee3244a24ffe6f2ba9de60ed5
+│   │   │   └── [-r--r--r-- map10194  569]  ./.git/objects/94/b5ffb0c8db7f640b5dbe024ddd44f4ca0054af
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/95
+│   │   │   └── [-r--r--r-- map10194  404]  ./.git/objects/95/695b226a3790b0d70b9262c32d2f11ed50d4d4
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/96
+│   │   │   └── [-r--r--r-- map10194   55]  ./.git/objects/96/233b34ccba706a9f89dca87a9282a3cd836e0a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/9a
+│   │   │   ├── [-r--r--r-- map10194  156]  ./.git/objects/9a/3c650f1d4f79e3d598d19405791ec2203bfb3b
+│   │   │   └── [-r--r--r-- map10194  43K]  ./.git/objects/9a/a100dc3db993f584dfb55c2fc37f183e1e7b43
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/9b
+│   │   │   └── [-r--r--r-- map10194  542]  ./.git/objects/9b/2eb1653dcd0a5b1bbe8ba43f8411cf5abcbcc8
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/9c
+│   │   │   ├── [-r--r--r-- map10194  174]  ./.git/objects/9c/58cca0c979c473bad63872bcf99a197b9c0c46
+│   │   │   ├── [-r--r--r-- map10194  543]  ./.git/objects/9c/7b12aef103f87195d83fae089936f5d436c60d
+│   │   │   └── [-r--r--r-- map10194 525K]  ./.git/objects/9c/f1733d8e43a424ad40611d60b430a9aea27ef2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/9d
+│   │   │   ├── [-r--r--r-- map10194  170]  ./.git/objects/9d/59b596f6fe957460f52868de4827b89ff1a78b
+│   │   │   ├── [-r--r--r-- map10194 1.6K]  ./.git/objects/9d/741c70111aa5685299113280203b7880ad9851
+│   │   │   ├── [-r--r--r-- map10194  17K]  ./.git/objects/9d/9e63e64639e4f5f8414e416d747a8378c3e31e
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/9d/aa5577999ce615474762249f72f08bab9d1bf5
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/a1
+│   │   │   ├── [-r--r--r-- map10194   62]  ./.git/objects/a1/1ad0c46696c636a5decdd5754713853db61e88
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/a1/b0ad6131cc009b8d55b496d1ed6896bfe9003c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/a3
+│   │   │   └── [-r--r--r-- map10194  731]  ./.git/objects/a3/0b9e4059f457496f990611e6dfd9e6fe5f92c5
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/a5
+│   │   │   └── [-r--r--r-- map10194 3.0K]  ./.git/objects/a5/2af973ea73cc9e7547ddf4da2e1657cb19445b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/a6
+│   │   │   └── [-r--r--r-- map10194 8.4M]  ./.git/objects/a6/2fb6502b9d164a2fc0bb4df5167ce914e97093
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/aa
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/aa/d30f9fe4d00fcd02b7306e498ecd9ac89715f8
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ab
+│   │   │   ├── [-r--r--r-- map10194 8.8M]  ./.git/objects/ab/85df9cd7d1fe7910ab003cd5f3b8c333e6c742
+│   │   │   └── [-r--r--r-- map10194  887]  ./.git/objects/ab/c9ee21e85eb95bee95e6980eb7b128dc05136a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ac
+│   │   │   └── [-r--r--r-- map10194  137]  ./.git/objects/ac/0af39bec038d7dacd4fcd90be1d3321f7ba504
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ad
+│   │   │   ├── [-r--r--r-- map10194   54]  ./.git/objects/ad/1801857ed544c02841476b5241d1893d9137f0
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/ad/cd6c80b29ed35e4415b650fe0cae7fc095557c
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ae
+│   │   │   ├── [-r--r--r-- map10194   94]  ./.git/objects/ae/61d69b465d12469fd50ecc9a8a0b15228a51a5
+│   │   │   └── [-r--r--r-- map10194 5.5M]  ./.git/objects/ae/66ee013e1280d35e4d6b6fdf17a538dc7ec079
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/af
+│   │   │   ├── [-r--r--r-- map10194 165K]  ./.git/objects/af/6c3d513faa1c3b4c9ed8208a0c48f5c4e25b81
+│   │   │   └── [-r--r--r-- map10194  157]  ./.git/objects/af/8ea4c67a9d0f2edddc74eee307d79980500ca0
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/b0
+│   │   │   └── [-r--r--r-- map10194  874]  ./.git/objects/b0/7c003ee6d8b523df5ef5affcc46a31b6ea8cba
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/b1
+│   │   │   ├── [-r--r--r-- map10194 7.0K]  ./.git/objects/b1/1edd53116831ed75ea5c85771e4c25162dfc5c
+│   │   │   ├── [-r--r--r-- map10194 9.0K]  ./.git/objects/b1/9c5f85deed34e4b85170d57b8d5940e5a14132
+│   │   │   └── [-r--r--r-- map10194  235]  ./.git/objects/b1/b704aa640c3f6371b404a6f7baa6c5ba186e95
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/b7
+│   │   │   ├── [-r--r--r-- map10194  266]  ./.git/objects/b7/52d0bf587699ee7b876a44ac7e22d7360a8b1c
+│   │   │   └── [-r--r--r-- map10194  210]  ./.git/objects/b7/a938365112702934e7f4efdf4a71f48cc565d6
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/b8
+│   │   │   ├── [-r--r--r-- map10194 117K]  ./.git/objects/b8/ae4a9775c0dfa20581cc56c869ecd5139a4c06
+│   │   │   └── [-r--r--r-- map10194  461]  ./.git/objects/b8/d3b104b2ccc123037e8e16a8b3eefc15265e13
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ba
+│   │   │   ├── [-r--r--r-- map10194 4.3K]  ./.git/objects/ba/953120ec8dde35f6a963a2a018a0dea58dd6ae
+│   │   │   └── [-r--r--r-- map10194 2.2K]  ./.git/objects/ba/955755dfef1351c5b7e572dbc31ee599a4d00a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/bc
+│   │   │   └── [-r--r--r-- map10194 5.0K]  ./.git/objects/bc/f0e391140c58ee72ecc7426f77dc87cea06eef
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/be
+│   │   │   └── [-r--r--r-- map10194  125]  ./.git/objects/be/1806105316c3ac8814e12e877f52b2c821b2bc
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/bf
+│   │   │   ├── [-r--r--r-- map10194 7.8K]  ./.git/objects/bf/6fe3751a982fe2c25e344372ea2b17096c1d52
+│   │   │   └── [-r--r--r-- map10194  558]  ./.git/objects/bf/d3d8735d3f1da4bfc78db76cb20d4c257eced1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c0
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/c0/b9f47b50be3f6171ddfa274621861d04c2a4a2
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c3
+│   │   │   └── [-r--r--r-- map10194  261]  ./.git/objects/c3/64aba6ba950d90ce1dcecfb1ae68fc9b0056f8
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c4
+│   │   │   ├── [-r--r--r-- map10194  15K]  ./.git/objects/c4/61388ca72ece0f4ec8b787fc020eed5a124508
+│   │   │   └── [-r--r--r-- map10194  16K]  ./.git/objects/c4/95432c117fbca7b001f2b35b6552285c716faa
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c5
+│   │   │   └── [-r--r--r-- map10194 525K]  ./.git/objects/c5/4b671d8776fb9a0ecef7485940003ddf7df5d6
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c6
+│   │   │   ├── [-r--r--r-- map10194 2.5K]  ./.git/objects/c6/083b3c9d7149a9365c30e27c41b56043b162ec
+│   │   │   ├── [-r--r--r-- map10194 5.6M]  ./.git/objects/c6/139e0f840d27d9dd1177660f8c28c1f899dffb
+│   │   │   └── [-r--r--r-- map10194  515]  ./.git/objects/c6/3daa0838bac4d814916e2d9def17a5843ae268
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c7
+│   │   │   ├── [-r--r--r-- map10194 8.2M]  ./.git/objects/c7/854f09c7fcfb3b0a8797b69c936814ada09ba9
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/c7/a04514abd42b78e7f31d336bbeb8cf24acaa06
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c8
+│   │   │   └── [-r--r--r-- map10194  406]  ./.git/objects/c8/788329e0615c4e7404d55f94fd09f5d1d8a334
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/c9
+│   │   │   ├── [-r--r--r-- map10194  668]  ./.git/objects/c9/344cea852207af0e4f79342dc020306d10481a
+│   │   │   ├── [-r--r--r-- map10194 1.2M]  ./.git/objects/c9/cabb6c3ca6cc1df2588e7c45f757b96b0ecd46
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/c9/d2bb1ba5369515f75385c632e18fb7276f9e64
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ca
+│   │   │   └── [-r--r--r-- map10194  18M]  ./.git/objects/ca/70e1b56af826f8614876e9c4c112b2919c0e43
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/cb
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/cb/7ecd1b3c92ef2a5d761d2725c6f3b4f851b46b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ce
+│   │   │   ├── [-r--r--r-- map10194  168]  ./.git/objects/ce/48b8fc93aa5133ead731f0b18fe7d26a30b0b2
+│   │   │   └── [-r--r--r-- map10194  170]  ./.git/objects/ce/99f152be6b6802e32ae5924184f45efdaed736
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/cf
+│   │   │   └── [-r--r--r-- map10194 116K]  ./.git/objects/cf/e3faf8a2c0b21530c6e993e7bad4bd6f23edea
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d1
+│   │   │   └── [-r--r--r-- map10194 129K]  ./.git/objects/d1/af04e23e340e3a239d0d69b49fbfe5d6809e12
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d3
+│   │   │   ├── [-r--r--r-- map10194 6.7K]  ./.git/objects/d3/aa2281c776489df668a808c4e8d8ac4a9a3321
+│   │   │   └── [-r--r--r-- map10194  166]  ./.git/objects/d3/b915f59fefa0f6d97db1f31dd82798922a8a0d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d4
+│   │   │   └── [-r--r--r-- map10194  403]  ./.git/objects/d4/e835f37ab0849cc8a1654a5311364c74e7d5ea
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d5
+│   │   │   ├── [-r--r--r-- map10194 8.8M]  ./.git/objects/d5/7ddc5f15182380b0d8a3d9ea31874d6f94b682
+│   │   │   └── [-r--r--r-- map10194  796]  ./.git/objects/d5/91f75d38294122736b1956db0d63c4198651e4
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d6
+│   │   │   └── [-r--r--r-- map10194   30]  ./.git/objects/d6/b7ef32c8478a48c3994dcadc86837f4371184d
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d7
+│   │   │   └── [-r--r--r-- map10194  119]  ./.git/objects/d7/f6d2e07ea57934febaed66b83687925f130e54
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/d8
+│   │   │   ├── [-r--r--r-- map10194  732]  ./.git/objects/d8/a990ee0bf786bbd8b48dcf7a2b3501fb431f49
+│   │   │   └── [-r--r--r-- map10194 201K]  ./.git/objects/d8/b062c4e15887ffa4858f308256af7139a90a28
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/da
+│   │   │   ├── [-r--r--r-- map10194  162]  ./.git/objects/da/77dc84610826002b9f478e728db8191fdb00e5
+│   │   │   ├── [-r--r--r-- map10194  541]  ./.git/objects/da/bade4a391c852151753aa5ebea7f98da36185e
+│   │   │   └── [-r--r--r-- map10194  131]  ./.git/objects/da/ec566c0a6687426600e69911cefcd4aeedc811
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/dc
+│   │   │   └── [-r--r--r-- map10194 733K]  ./.git/objects/dc/809da5566284fb293eca5177f775669e7f0719
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/dd
+│   │   │   └── [-r--r--r-- map10194 8.3M]  ./.git/objects/dd/8b3e2c9fc0ce5916c82aadea670c8853d15601
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/df
+│   │   │   └── [-r--r--r-- map10194 2.1K]  ./.git/objects/df/74e2c7d4eacd0857098118c0a026921be922c0
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/e1
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/e1/1ae115c6fcf00ec82aff6dde824c1a5abfe2df
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/e4
+│   │   │   ├── [-r--r--r-- map10194   94]  ./.git/objects/e4/25228d56e9863d4f6f5f2f9e2d1006edadea31
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/e4/3a53998e45dcf388d094b2ea035a602ebbcff1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/e5
+│   │   │   └── [-r--r--r-- map10194 5.0K]  ./.git/objects/e5/add69443f0a2e0440453c563f3c7873593a318
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/e6
+│   │   │   ├── [-r--r--r-- map10194 2.8K]  ./.git/objects/e6/1a8681f924e835762095bfad81bdef9870897b
+│   │   │   └── [-r--r--r-- map10194 2.8K]  ./.git/objects/e6/571cac9dd88f05ec2d84a772e6132a783f2758
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/e7
+│   │   │   └── [-r--r--r-- map10194  171]  ./.git/objects/e7/dcaf4185af235e2f6d1e2d99bc1a76cdb043c1
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/eb
+│   │   │   └── [-r--r--r-- map10194   94]  ./.git/objects/eb/fb50907d017d7e9226c90b8680d7661081c83a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ec
+│   │   │   └── [-r--r--r-- map10194 138K]  ./.git/objects/ec/652fd1a007bbbcd937300253496300b88c6cbc
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ee
+│   │   │   └── [-r--r--r-- map10194  27M]  ./.git/objects/ee/6640c40902d304cc6c1e6d995a67e98db834ac
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/ef
+│   │   │   ├── [-r--r--r-- map10194  495]  ./.git/objects/ef/137ba9d6a92455aa69eb0615abf86cea4430ca
+│   │   │   └── [-r--r--r-- map10194 6.0K]  ./.git/objects/ef/a3c819004d4cad9934455d97de574f9ad5bff9
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f0
+│   │   │   ├── [-r--r--r-- map10194   64]  ./.git/objects/f0/00ec8da4438ec1ae808d6e93bc948c6ef308ec
+│   │   │   ├── [-r--r--r-- map10194  11K]  ./.git/objects/f0/5f9fa1f6dafdf470b15b395d5556a850ec30de
+│   │   │   └── [-r--r--r-- map10194 3.4K]  ./.git/objects/f0/66d30a7ccef73dbf160d0d2cb31b38edd620ad
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f1
+│   │   │   └── [-r--r--r-- map10194  12K]  ./.git/objects/f1/3334040003c24e4609cdbaac1fb64d6afb3298
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f2
+│   │   │   ├── [-r--r--r-- map10194 7.8K]  ./.git/objects/f2/5fc7f90aa44d50742d887654eadb8472d6749e
+│   │   │   └── [-r--r--r-- map10194  115]  ./.git/objects/f2/b317ace654dfc6c80f48517445f4ce5bae6862
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f3
+│   │   │   └── [-r--r--r-- map10194  946]  ./.git/objects/f3/56077349c55a0088af22be7def79ffbe4f28cc
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f4
+│   │   │   ├── [-r--r--r-- map10194  430]  ./.git/objects/f4/4b6e18feeea3168a3e75eb0c65ddaeb46dee41
+│   │   │   └── [-r--r--r-- map10194 2.3K]  ./.git/objects/f4/6c782b89a46b7fe2b5e151b03f810a9dda42c8
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f5
+│   │   │   ├── [-r--r--r-- map10194 4.6K]  ./.git/objects/f5/6ba8557fb8537de12794620a002a132ee1620a
+│   │   │   ├── [-r--r--r-- map10194 9.5K]  ./.git/objects/f5/c68194dd973f075d3dc6e49bd0820fdb2f0e0e
+│   │   │   └── [-r--r--r-- map10194 5.3K]  ./.git/objects/f5/d7423c8c93cf24ec77334eb255b4c98bbc2c1a
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f6
+│   │   │   ├── [-r--r--r-- map10194 7.4K]  ./.git/objects/f6/1d3d177a74b17e64ab6c37a3dfe2c52bd4f238
+│   │   │   └── [-r--r--r-- map10194 4.9K]  ./.git/objects/f6/bbe40a8eed89b75bc87bb1a8e0f20bb02eaebf
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/f7
+│   │   │   └── [-r--r--r-- map10194  279]  ./.git/objects/f7/65e561a1ee305d0e780248766828638e94604b
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/fa
+│   │   │   └── [-r--r--r-- map10194 8.4M]  ./.git/objects/fa/0bb90eeba7d288e1e5ff843ed6395a97b689af
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/fc
+│   │   │   └── [-r--r--r-- map10194  541]  ./.git/objects/fc/3125414aa292dd945443bcaf9fd13b7b637212
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./.git/objects/info
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./.git/objects/pack
+│   │       ├── [-r--r--r-- map10194 1.6K]  ./.git/objects/pack/pack-bd26b9d5c064d3b6fb7a542db773ba97505d985b.idx
+│   │       ├── [-r--r--r-- map10194 5.6K]  ./.git/objects/pack/pack-bd26b9d5c064d3b6fb7a542db773ba97505d985b.pack
+│   │       └── [-r--r--r-- map10194  140]  ./.git/objects/pack/pack-bd26b9d5c064d3b6fb7a542db773ba97505d985b.rev
+│   ├── [-rw-rw-r-- map10194   41]  ./.git/ORIG_HEAD
+│   ├── [-rw-rw-r-- map10194  112]  ./.git/packed-refs
+│   └── [drwxrwxr-x map10194 4.0K]  ./.git/refs
+│       ├── [drwxrwxr-x map10194 4.0K]  ./.git/refs/heads
+│       │   └── [-rw-rw-r-- map10194   41]  ./.git/refs/heads/main
+│       ├── [drwxrwxr-x map10194 4.0K]  ./.git/refs/remotes
+│       │   └── [drwxrwxr-x map10194 4.0K]  ./.git/refs/remotes/origin
+│       │       ├── [-rw-rw-r-- map10194   30]  ./.git/refs/remotes/origin/HEAD
+│       │       └── [-rw-rw-r-- map10194   41]  ./.git/refs/remotes/origin/main
+│       └── [drwxrwxr-x map10194 4.0K]  ./.git/refs/tags
+├── [drwxrwxr-x map10194 4.0K]  ./.github
+│   └── [drwxrwxr-x map10194 4.0K]  ./.github/workflows
+│       └── [-rw-rw-r-- map10194  681]  ./.github/workflows/ci.yml
+├── [-rw-rw-r-- map10194  114]  ./.gitignore
+├── [-rw-rw-r-- map10194 1.1K]  ./LICENSE
+├── [drwxrwxr-x map10194 4.0K]  ./notebooks
+│   ├── [-rw-rw-r-- map10194  34K]  ./notebooks/00_census.ipynb
+│   ├── [-rw-rw-r-- map10194 1.6M]  ./notebooks/01_network-connectivity.ipynb
+│   ├── [-rw-rw-r-- map10194 689K]  ./notebooks/02_elevation.ipynb
+│   ├── [-rw-rw-r-- map10194 209K]  ./notebooks/03_noaa-tides.ipynb
+│   ├── [-rw-rw-r-- map10194  15K]  ./notebooks/04_street-network.ipynb
+│   ├── [-rw-rw-r-- map10194 285K]  ./notebooks/05_fema-flood-zones.ipynb
+│   ├── [-rw-rw-r-- map10194 249K]  ./notebooks/06_precipitation.ipynb
+│   ├── [-rw-rw-r-- map10194  25K]  ./notebooks/07_tide-conecction.ipynb
+│   ├── [-rw-rw-r-- map10194 266K]  ./notebooks/08_infrastructure.ipynb
+│   ├── [-rw-rw-r-- map10194 181K]  ./notebooks/09_street-flooding.ipynb
+│   ├── [-rw-rw-r-- map10194 1.0M]  ./notebooks/10_flood-events-master-table.ipynb
+│   ├── [-rw-rw-r-- map10194  18K]  ./notebooks/11_balancing.ipynb
+│   ├── [-rw-rw-r-- map10194 359K]  ./notebooks/12_filter_.ipynb
+│   ├── [-rw-rw-r-- map10194  33K]  ./notebooks/13_clustering-anomaly.ipynb
+│   ├── [-rw-rw-r-- map10194 210K]  ./notebooks/14_ocurrence-ml.ipynb
+│   ├── [-rw-rw-r-- map10194  65K]  ./notebooks/15_intensity-ml.ipynb
+│   ├── [-rw-rw-r-- map10194  10K]  ./notebooks/16_resolution-ml.ipynb
+│   ├── [-rw-rw-r-- map10194 9.4K]  ./notebooks/balancing.ipynb
+│   ├── [-rw-rw-r-- map10194  34K]  ./notebooks/census.ipynb
+│   ├── [drwxrwxr-x map10194 4.0K]  ./notebooks/data
+│   │   └── [drwxrwxr-x map10194 4.0K]  ./notebooks/data/processed
+│   │       └── [drwxrwxr-x map10194 4.0K]  ./notebooks/data/processed/modeling
+│   │           └── [drwxrwxr-x map10194 4.0K]  ./notebooks/data/processed/modeling/filtered
+│   ├── [-rw-rw-r-- map10194  25K]  ./notebooks/download-311.ipynb
+│   ├── [-rw-rw-r-- map10194 689K]  ./notebooks/elevation.ipynb
+│   ├── [-rw-rw-r-- map10194 285K]  ./notebooks/fema-flood-zones.ipynb
+│   ├── [-rw-rw-r-- map10194 9.5K]  ./notebooks/flood-events-master-table.ipynb
+│   ├── [-rw-rw-r-- map10194 266K]  ./notebooks/infrastructure.ipynb
+│   ├── [-rw-rw-r-- map10194    0]  ./notebooks/_.ipynb
+│   ├── [-rw-rw-r-- map10194 1.6M]  ./notebooks/network-connectivity.ipynb
+│   ├── [-rw-rw-r-- map10194 209K]  ./notebooks/noaa-tides.ipynb
+│   ├── [-rw-rw-r-- map10194 249K]  ./notebooks/precipitation.ipynb
+│   ├── [-rw-rw-r-- map10194 181K]  ./notebooks/street-flooding.ipynb
+│   ├── [-rw-rw-r-- map10194 139K]  ./notebooks/street-flooding_.ipynb
+│   ├── [-rw-rw-r-- map10194  13K]  ./notebooks/street-flooding__.ipynb
+│   ├── [-rw-rw-r-- map10194  15K]  ./notebooks/street-network.ipynb
+│   └── [-rw-rw-r-- map10194  25K]  ./notebooks/tide-conecction.ipynb
+├── [drwxrwxr-x map10194 4.0K]  ./outputs
+│   ├── [drwxrwxr-x map10194 4.0K]  ./outputs/figures
+│   │   └── [-rw-rw-r-- map10194   13]  ./outputs/figures/.gitignore
+│   └── [drwxrwxr-x map10194 4.0K]  ./outputs/tables
+│       └── [-rw-rw-r-- map10194   13]  ./outputs/tables/.gitignore
+├── [-rw-rw-r-- map10194  129]  ./.pre-commit-config.yaml
+├── [-rw-rw-r-- map10194  968]  ./pyproject.toml
+├── [drwxrwxr-x map10194 4.0K]  ./.pytest_cache
+│   ├── [-rw-rw-r-- map10194  191]  ./.pytest_cache/CACHEDIR.TAG
+│   ├── [-rw-rw-r-- map10194   37]  ./.pytest_cache/.gitignore
+│   ├── [-rw-rw-r-- map10194  302]  ./.pytest_cache/README.md
+│   └── [drwxrwxr-x map10194 4.0K]  ./.pytest_cache/v
+│       └── [drwxrwxr-x map10194 4.0K]  ./.pytest_cache/v/cache
+│           ├── [-rw-rw-r-- map10194    2]  ./.pytest_cache/v/cache/lastfailed
+│           └── [-rw-rw-r-- map10194  328]  ./.pytest_cache/v/cache/nodeids
+├── [-rw-rw-r-- map10194 2.1K]  ./README.md
+├── [-rw-rw-r-- map10194 3.4K]  ./README_.md
+├── [drwxrwxr-x map10194 4.0K]  ./scripts
+│   ├── [-rw-rw-r-- map10194 2.6K]  ./scripts/build_directed_graph_metrics.py
+│   ├── [-rw-rw-r-- map10194 1.4K]  ./scripts/build_flood_events_balanced.py
+│   ├── [-rw-rw-r-- map10194 1.3K]  ./scripts/build_flood_events_master_table.py
+│   ├── [-rw-rw-r-- map10194 8.0K]  ./scripts/create_balancing_notebook.py
+│   ├── [-rw-rw-r-- map10194  27K]  ./scripts/create_filter_notebook.py
+│   ├── [-rw-rw-r-- map10194 7.9K]  ./scripts/create_flood_events_master_notebook.py
+│   ├── [-rw-rw-r-- map10194 5.3K]  ./scripts/create_infrastructure_notebook.py
+│   ├── [-rw-rw-r-- map10194  29K]  ./scripts/create_modeling_copy_notebooks.py
+│   ├── [-rw-rw-r-- map10194  28K]  ./scripts/create_modeling_notebooks.py
+│   ├── [-rw-rw-r-- map10194 1.1K]  ./scripts/download_311.py
+│   ├── [-rw-rw-r-- map10194 1.6K]  ./scripts/download_infrastructure.py
+│   ├── [-rw-rw-r-- map10194  21K]  ./scripts/download_precipitation_station.py
+│   ├── [-rw-rw-r-- map10194 1.8K]  ./scripts/download_street_network.py
+│   ├── [-rw-rw-r-- map10194  34K]  ./scripts/fix_census_notebook.py
+│   ├── [-rw-rw-r-- map10194  43K]  ./scripts/fix_precipitation_notebook.py
+│   ├── [-rw-rw-r-- map10194  12K]  ./scripts/fix_precipitation_windows.py
+│   ├── [-rw-rw-r-- map10194 8.2K]  ./scripts/fix_street_flooding_corrected.py
+│   ├── [-rw-rw-r-- map10194 4.2K]  ./scripts/fix_street_flooding_notebook.py
+│   ├── [-rw-rw-r-- map10194    0]  ./scripts/__init__.py
+│   ├── [-rw-rw-r-- map10194 8.0K]  ./scripts/make_precipitation_local_only.py
+│   ├── [drwxrwxr-x map10194 4.0K]  ./scripts/__pycache__
+│   │   ├── [-rw-rw-r-- map10194 2.3K]  ./scripts/__pycache__/build_flood_events_balanced.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 2.5K]  ./scripts/__pycache__/build_flood_events_master_table.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 9.2K]  ./scripts/__pycache__/create_balancing_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  28K]  ./scripts/__pycache__/create_filter_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 9.2K]  ./scripts/__pycache__/create_flood_events_master_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 5.9K]  ./scripts/__pycache__/create_infrastructure_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  32K]  ./scripts/__pycache__/create_modeling_copy_notebooks.cpython-311.pyc
+│   │   ├── [-rw-rw-r-- map10194  31K]  ./scripts/__pycache__/create_modeling_copy_notebooks.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  32K]  ./scripts/__pycache__/create_modeling_notebooks.cpython-311.pyc
+│   │   ├── [-rw-rw-r-- map10194  31K]  ./scripts/__pycache__/create_modeling_notebooks.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 2.6K]  ./scripts/__pycache__/download_infrastructure.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  27K]  ./scripts/__pycache__/download_precipitation_station.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  35K]  ./scripts/__pycache__/fix_census_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  31K]  ./scripts/__pycache__/fix_precipitation_notebook.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  12K]  ./scripts/__pycache__/fix_precipitation_windows.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  172]  ./scripts/__pycache__/__init__.cpython-311.pyc
+│   │   ├── [-rw-rw-r-- map10194  160]  ./scripts/__pycache__/__init__.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 8.8K]  ./scripts/__pycache__/make_precipitation_local_only.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194  18K]  ./scripts/__pycache__/rebuild_precipitation_notebook_from_local_csv.cpython-313.pyc
+│   │   └── [-rw-rw-r-- map10194  20K]  ./scripts/__pycache__/rebuild_street_flooding_from_local_311.cpython-313.pyc
+│   ├── [-rw-rw-r-- map10194  17K]  ./scripts/rebuild_precipitation_notebook_from_local_csv.py
+│   └── [-rw-rw-r-- map10194  14K]  ./scripts/rebuild_street_flooding_from_local_311.py
+├── [drwxrwxr-x map10194 4.0K]  ./src
+│   ├── [drwxrwxr-x map10194 4.0K]  ./src/project_name
+│   │   ├── [-rw-rw-r-- map10194  44K]  ./src/project_name/flood_event_balancing.py
+│   │   ├── [-rw-rw-r-- map10194  49K]  ./src/project_name/flood_events_master.py
+│   │   ├── [-rw-rw-r-- map10194 4.3K]  ./src/project_name/infrastructure.py
+│   │   ├── [-rw-rw-r-- map10194  184]  ./src/project_name/__init__.py
+│   │   ├── [-rw-rw-r-- map10194  88K]  ./src/project_name/modeling_stage.py
+│   │   ├── [drwxrwxr-x map10194 4.0K]  ./src/project_name/__pycache__
+│   │   │   ├── [-rw-rw-r-- map10194  55K]  ./src/project_name/__pycache__/flood_event_balancing.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  49K]  ./src/project_name/__pycache__/flood_event_balancing.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  71K]  ./src/project_name/__pycache__/flood_events_master.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  59K]  ./src/project_name/__pycache__/flood_events_master.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 6.0K]  ./src/project_name/__pycache__/infrastructure.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 5.4K]  ./src/project_name/__pycache__/infrastructure.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  387]  ./src/project_name/__pycache__/__init__.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  348]  ./src/project_name/__pycache__/__init__.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 108K]  ./src/project_name/__pycache__/modeling_stage.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  92K]  ./src/project_name/__pycache__/modeling_stage.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 5.5K]  ./src/project_name/__pycache__/requests_311.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 5.1K]  ./src/project_name/__pycache__/requests_311.cpython-313.pyc
+│   │   │   ├── [-rw-rw-r-- map10194  21K]  ./src/project_name/__pycache__/street_network.cpython-311.pyc
+│   │   │   ├── [-rw-rw-r-- map10194 1.9K]  ./src/project_name/__pycache__/utils.cpython-311.pyc
+│   │   │   └── [-rw-rw-r-- map10194 1.8K]  ./src/project_name/__pycache__/utils.cpython-313.pyc
+│   │   ├── [-rw-rw-r-- map10194 4.1K]  ./src/project_name/requests_311.py
+│   │   ├── [-rw-rw-r-- map10194  14K]  ./src/project_name/street_network.py
+│   │   └── [-rw-rw-r-- map10194 1.3K]  ./src/project_name/utils.py
+│   └── [drwxrwxr-x map10194 4.0K]  ./src/urban_flood_stress.egg-info
+│       ├── [-rw-rw-r-- map10194    1]  ./src/urban_flood_stress.egg-info/dependency_links.txt
+│       ├── [-rw-r--r-- map10194 1.6K]  ./src/urban_flood_stress.egg-info/PKG-INFO
+│       ├── [-rw-rw-r-- map10194  146]  ./src/urban_flood_stress.egg-info/requires.txt
+│       ├── [-rw-rw-r-- map10194  440]  ./src/urban_flood_stress.egg-info/SOURCES.txt
+│       └── [-rw-rw-r-- map10194   13]  ./src/urban_flood_stress.egg-info/top_level.txt
+├── [drwxrwxr-x map10194 4.0K]  ./tests
+│   ├── [drwxrwxr-x map10194 4.0K]  ./tests/__pycache__
+│   │   ├── [-rw-rw-r-- map10194  155]  ./tests/__pycache__/_test.cpython-313-pytest-9.0.3.pyc
+│   │   ├── [-rw-rw-r-- map10194  18K]  ./tests/__pycache__/test_requests_311.cpython-313-pytest-9.0.3.pyc
+│   │   └── [-rw-rw-r-- map10194  18K]  ./tests/__pycache__/test_street_network.cpython-313-pytest-9.0.3.pyc
+│   ├── [-rw-rw-r-- map10194    0]  ./tests/_test.py
+│   ├── [-rw-rw-r-- map10194 5.0K]  ./tests/test_requests_311.py
+│   └── [-rw-rw-r-- map10194 4.0K]  ./tests/test_street_network.py
+└── [-rw-rw-r-- map10194    0]  ./tree.txt
+
+317 directories, 1136 files
