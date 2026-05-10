@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Occurrence Classification — Test-Set Performance}
+\label{tab:occurrence_results}
+\begin{tabular}{llrrrrrr}
+\toprule
+model_name & split_strategy & test_roc_auc & test_pr_auc & test_f1 & test_precision & test_recall & test_brier_score \\
+\midrule
+Random Forest & Stratified 75 15 10 & 0.8922 & 0.8948 & 0.8175 & 0.7979 & 0.8380 & 0.1382 \\
+Gradient Boosting & Stratified 75 15 10 & 0.8893 & 0.8866 & 0.8111 & 0.7919 & 0.8314 & 0.1349 \\
+Decision Tree & Stratified 75 15 10 & 0.8088 & 0.7919 & 0.7286 & 0.7305 & 0.7267 & 0.1850 \\
+Logistic Regression & Stratified 75 15 10 & 0.7636 & 0.7328 & 0.6722 & 0.7055 & 0.6418 & 0.1994 \\
+\bottomrule
+\end{tabular}
+\end{table}

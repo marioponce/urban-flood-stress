@@ -1,0 +1,20 @@
+\begin{table}
+\caption{Resolution Time Regression — Test-Set Performance}
+\label{tab:resolution_time_results}
+\begin{tabular}{llrrrrr}
+\toprule
+model_name & split_strategy & test_rmse & test_mae & test_r2 & test_median_absolute_error & test_spearman_correlation \\
+\midrule
+Gradient Boosting Regressor & Temporal By Administration & 35.6466 & 17.3714 & 0.8158 & 7.2675 & 0.0065 \\
+Gradient Boosting Regressor & Stratified 75 15 10 & 58.5189 & 19.8737 & 0.8076 & 6.1836 & -0.0040 \\
+Random Forest Regressor & Temporal By Administration & 54.8844 & 18.7903 & 0.5633 & 7.2298 & 0.0059 \\
+Random Forest Regressor & Stratified 75 15 10 & 88.7336 & 22.3371 & 0.5577 & 5.9985 & -0.0253 \\
+Dummy Regressor & Temporal By Administration & 83.8125 & 23.4141 & -0.0184 & 13.3333 & NaN \\
+Dummy Regressor & Stratified 75 15 10 & 135.2566 & 33.5684 & -0.0278 & 13.2167 & NaN \\
+Linear Regression & Stratified 75 15 10 & 3704.9263 & 90.8644 & -770.1621 & 8.7047 & 0.0027 \\
+Ridge & Stratified 75 15 10 & 3875.1270 & 93.5749 & -842.6424 & 8.6533 & 0.0038 \\
+Ridge & Temporal By Administration & 8796.9427 & 98.5594 & -11218.1676 & 8.3444 & 0.0096 \\
+Linear Regression & Temporal By Administration & 8960.9115 & 100.1886 & -11640.3002 & 8.3025 & 0.0094 \\
+\bottomrule
+\end{tabular}
+\end{table}

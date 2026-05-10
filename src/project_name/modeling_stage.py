@@ -720,12 +720,77 @@ def _stratification_labels(frame: pd.DataFrame, target_col: str | None = None) -
     return None
 
 
+def _temporal_split_by_administration(
+    frame: pd.DataFrame,
+    target_col: str | None,
+) -> SplitDefinition | None:
+    """Build a forward-looking temporal split aligned with mayoral administrations.
+
+    Train  = bloomberg era  (events with start < 2014-01-01)
+    Val    = de blasio era  (2014-01-01 <= start < 2022-01-01)
+    Test   = adams/mamdani  (start >= 2022-01-01)
+
+    Falls back to None when any partition is too small to be useful (< 30 rows)
+    or when the target has only one class in a partition.
+    """
+    if "start" not in frame.columns:
+        return None
+
+    dates = to_naive_datetime(frame["start"])
+    cut_val = pd.Timestamp("2014-01-01")
+    cut_test = pd.Timestamp("2022-01-01")
+
+    train_mask = dates.lt(cut_val)
+    val_mask = dates.ge(cut_val) & dates.lt(cut_test)
+    test_mask = dates.ge(cut_test)
+
+    train_index = frame.index[train_mask].to_numpy()
+    validation_index = frame.index[val_mask].to_numpy()
+    test_index = frame.index[test_mask].to_numpy()
+
+    min_rows = 30
+    if len(train_index) < min_rows or len(validation_index) < min_rows or len(test_index) < min_rows:
+        return None
+
+    if target_col and target_col in frame.columns:
+        for idx_arr, label in [(train_index, "train"), (validation_index, "validation"), (test_index, "test")]:
+            partition_target = frame.loc[idx_arr, target_col]
+            if target_col in {"occurrence", "resolution_bool"}:
+                if partition_target.astype("string").nunique(dropna=True) < 2:
+                    return None
+            else:
+                if pd.to_numeric(partition_target, errors="coerce").notna().sum() < min_rows:
+                    return None
+
+    return SplitDefinition(
+        name="temporal_by_administration",
+        train_index=train_index,
+        validation_index=validation_index,
+        test_index=test_index,
+        stratify_labels=None,
+        notes=(
+            "Forward-looking temporal split by mayoral administration: "
+            "train=Bloomberg(<2014), val=de Blasio(2014-2021), test=Adams/Mamdani(>=2022). "
+            "No shuffle — strictly respects time ordering to prevent leakage. "
+            "Hyperparameter search uses train/validation; test is final holdout."
+        ),
+    )
+
+
 def make_split_definitions(
     frame: pd.DataFrame,
     include_spatial: bool = True,
     target_col: str | None = None,
 ) -> list[SplitDefinition]:
     del include_spatial
+    splits: list[SplitDefinition] = []
+
+    # --- Split 1: forward-looking temporal split by mayoral administration ---
+    temporal_split = _temporal_split_by_administration(frame, target_col=target_col)
+    if temporal_split is not None:
+        splits.append(temporal_split)
+
+    # --- Split 2: stratified random 75/15/10 (classic baseline) ---
     labels = _stratification_labels(frame, target_col=target_col)
     indices = frame.index.to_numpy()
     stratify = labels.loc[indices] if labels is not None else None
@@ -752,16 +817,23 @@ def make_split_definitions(
         stratify=holdout_labels,
     )
 
-    return [
+    splits.append(
         SplitDefinition(
             name="stratified_75_15_10",
             train_index=np.asarray(train_index),
             validation_index=np.asarray(validation_index),
             test_index=np.asarray(test_index),
             stratify_labels=labels,
-            notes="Classic 75/15/10 split. Stratification prioritizes target balance plus mayoral_administration when feasible; hyperparameter search uses train/validation, and the test split is final holdout.",
+            notes=(
+                "Classic 75/15/10 stratified-random split. "
+                "Stratification prioritizes target balance plus mayoral_administration when feasible; "
+                "hyperparameter search uses train/validation, test split is final holdout. "
+                "Shuffle=True — compare against temporal_by_administration to detect leakage."
+            ),
         )
-    ]
+    )
+
+    return splits
 
 
 def classification_metrics(y_true: pd.Series, y_pred: np.ndarray, y_score: np.ndarray | None = None) -> dict[str, float]:
@@ -1168,7 +1240,11 @@ def fit_supervised_models(
 
     predictor_cols = get_predictor_columns(work, task_name)
     audit = build_leakage_audit(work, task_name)
-    preprocessor, _, _ = build_preprocessor(work, predictor_cols, scale_numeric=True)
+    # Bug-4 fix: do NOT fit a global preprocessor here.  The scaler/imputer
+    # must be fit exclusively on each split's train partition so that val/test
+    # statistics never leak into the transformation of train data.  We keep a
+    # prototype (unfitted) preprocessor and clone it inside the split loop.
+    preprocessor_proto, _, _ = build_preprocessor(work, predictor_cols, scale_numeric=True)
 
     results_records: list[dict[str, Any]] = []
     prediction_frames: list[pd.DataFrame] = []
@@ -1229,7 +1305,7 @@ def fit_supervised_models(
         for spec in model_specs:
             pipeline = Pipeline(
                 steps=[
-                    ("preprocess", clone(preprocessor)),
+                    ("preprocess", clone(preprocessor_proto)),
                     ("model", clone(spec.estimator)),
                 ]
             )
@@ -1708,6 +1784,24 @@ def evaluate_clustering_algorithms(frame: pd.DataFrame) -> tuple[pd.DataFrame, p
     for part in label_frames:
         label_df = label_df.merge(part.drop(columns=["occurrence", "intensity", "resolution", "resolution_bool"]), on=["event_id", "segment_id"], how="left")
 
+    # Bug-3 guard: warn when events were silently dropped by _cluster_matrix
+    # because all their clustering features were NaN. These events get NaN
+    # cluster_id and are invisible in downstream diagnostics (NB 14, 15, 16).
+    cluster_id_cols = [c for c in label_df.columns if c.endswith("_cluster_id")]
+    if cluster_id_cols:
+        n_total = len(label_df)
+        n_no_cluster = int(label_df[cluster_id_cols].isna().all(axis=1).sum())
+        if n_no_cluster > 0:
+            warnings.warn(
+                f"evaluate_clustering_algorithms: {n_no_cluster}/{n_total} observed events "
+                f"({100 * n_no_cluster / max(n_total, 1):.1f}%) have no cluster assignment "
+                f"because all their clustering features were NaN. "
+                f"These events will be missing from downstream cluster diagnostics "
+                f"in notebooks 14, 15, and 16. "
+                f"Check feature availability with unavailable_expected_features().",
+                stacklevel=2,
+            )
+
     combined_cluster_col = "combined_cluster_id"
     if combined_cluster_col in label_df.columns:
         profiles = observed.merge(label_df[["event_id", combined_cluster_col]], on="event_id", how="left")
@@ -1926,6 +2020,11 @@ def run_resolution_ml(frame: pd.DataFrame | None = None) -> tuple[pd.DataFrame, 
 
     closure_results.to_csv(RESOLUTION_CLOSURE_RESULTS_PATH, index=False)
     time_results.to_csv(RESOLUTION_TIME_RESULTS_PATH, index=False)
+    # Cast y_true/y_pred to float before combining classification (bool) and regression
+    # (float) frames — pd.to_numeric leaves bool as bool, so concat yields object dtype
+    # which breaks Arrow parquet serialization.
+    for _col in ("y_true", "y_pred"):
+        closure_predictions[_col] = closure_predictions[_col].astype(float)
     predictions = pd.concat([closure_predictions, time_predictions], ignore_index=True)
     predictions.to_parquet(RESOLUTION_PREDICTIONS_PATH, index=False)
     importance = pd.concat(

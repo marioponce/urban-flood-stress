@@ -1,0 +1,16 @@
+{
+  "flood_occurrence": "binary: no / yes",
+  "complaint_count": "0=none | 1=low | 2\u20133=moderate | 4+=high",
+  "event_resolved": "no_flood (occurrence=no) | resolved | unresolved",
+  "event_duration": "no_flood | short (<6h) | medium (6\u201324h) | long (24\u201372h) | very_long (>72h) | unknown",
+  "precip_total": "dry (0mm) | light (0\u201310mm) | moderate (10\u201340mm) | heavy (>40mm)",
+  "precip_peak": "calm (0mm/h) | light (0\u20132mm/h) | moderate (2\u20138mm/h) | intense (>8mm/h)",
+  "tide_level": "normal (<1.3m) | elevated (1.3\u20132.0m) | high (2.0\u20132.5m) | extreme (>2.5m)",
+  "elevation": "quantile 4-bin (dem_mean ft): very_low | low | medium | high",
+  "slope": "quantile 4-bin (dem_slope): flat | gentle | moderate | steep",
+  "fema_zone_overlap": "none (0ft) | low (0\u2013200ft) | moderate (200\u2013500ft) | high (>500ft)",
+  "edge_betweenness": "quantile 4-bin on log10(segment_edge_betweenness): low | medium | high | critical",
+  "travel_time": "quantile 4-bin (segment_travel_time_s): short | medium | long | very_long",
+  "drain_distance": "quantile 4-bin (catch_basin_nearest_ft): near | moderate | far | very_far",
+  "median_income": "quantile 4-bin (census_median_household_income): low | moderate | high | very_high"
+}
